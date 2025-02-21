@@ -1,13 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello</title>
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            height: 100vh;
+            /* background: #f4f4f4; */
+            background: url('/anh2.gif');
+            background-size: contain;
+            background-position: 0px 300px;
+        }
+
+        /* Sidebar menu */
+        .sidebar {
+            width: 200px;
+            color: black;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            width: 100%;
+        }
+
+        .menu a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background: #d6d2d2;
+        }
+
+        /* Main content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+            border-radius: 10px;
+            margin: 50px;
+            text-align: center;
+            height: fit-content;
+        }
+
+        .main-content p {
+            font-weight: bold;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            /* filter: grayscale(80%) contrast(100%); */
+
+        }
+
+        h1 {
+            color: black;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            color: white;
+            line-height: 1.5;
+            margin: 10px 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Social links */
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 5px;
+        }
+
+        .social a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            padding: 5px 20px;
+            border-radius: 8px;
+            border: 2px solid black;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            background: rgb(53, 164, 205);
+            color: white;
+        }
+
+        /* Icon Style */
+        .social i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 30px;
+            font-size: 20px;
+            border-radius: 50%;
+            border: 3px solid #d2cece;
+            background: white;
+        }
+
+        /* Custom icon colors */
+        .fa-github {
+            color: black;
+        }
+
+        .fa-facebook {
+            color: #1877f2;
+        }
+
+        .fa-linkedin {
+            color: #0a66c2;
+        }
+
+        .fa-comments {
+            color: #0088cc;
+        }
+
+        #info {
+            margin-top: 80px;
+            display: block;
+
+        }
+
+        #projects {
+            display: none;
+            /* Ẩn Project */
+        }
+
+        #hehe {
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: black;
+        }
+
+        #coDinh {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            /* Nền mờ */
+            color: white;
+            text-align: center;
+        }
+
+
+        button {
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #0056b3, #0099cc);
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .menu a.active {
+            background:orange;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-    <p>Tôi thử làm cái này để test xem có dung được không</p>
-    <h1>Tôi là Nguyễn Văn Hải</h1>
-    <p>Ở đây là làm cơ bản, nếu chạy được tôi sẽ làm thêm</p>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Hello World</h2>
+        <div class="menu">
+            <a href="#" class="active" onclick="showSection('info')"><i class="fa fa-user"></i> Infomation</a>
+            <a href="#" onclick="showSection('projects')"><i class="fa fa-code"></i> Projects</a>
+            <a href="#"><i class="fa fa-graduation-cap"></i> Experience</a>
+            <a href="#"><i class="fa fa-envelope"></i> Contact</a>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content" id="content">
+
+        <!-- Main content -->
+        <div class="main-content">
+            <div id="info">
+                <img src="/anh1.jpg" alt="Ảnh đại diện">
+                <h1>Nguyễn Văn Hải</h1>
+                <div id="hehe">
+                    <p style="font-size: larger;">
+                        Hello! I am currently a Coder and on my journey to become a Fullstack Developer
+                    </p>
+                    <p>
+                        I hope to create many useful and innovative products.
+                        <br>
+                        Besides, I also really like to learn about culture and
+                        want to explore many places...
+                    </p>
+                </div>
+
+                <br>
+                <button onclick="showSection('projects')"><i class="fa fa-code"></i> Go to My Projects</button>
+            </div>
+
+            <div id="projects">
+
+                <h1>Go to my GitHub to see My Projects</h1>
+                <a href="https://github.com/nvhai272/Marina-Fleet-Web" target="_blank">
+                    <i class="fa fa-github"></i> Web quản lí và cung cấp dịch vụ trên tàu của Marina Fleet
+                </a><br>
+                <a href="https://github.com/nvhai272/Manager-Borrow-Books-Java-App" target="_blank">
+                    <i class="fa fa-github"></i> Ứng dụng desktop quản lí mượn trả sách ở thư viện
+                </a><br>
+                <a href="https://github.com/nvhai272/Online-Mobile-Recharge-Web" target="_blank">
+                    <i class="fa fa-github"></i> Web quản lí và cung cấp dịch vụ nạp tiền, đăng kí gọi cước mạng di động
+                </a><br>
+                <a href="https://github.com/nvhai272/AppMusic_WebAppManagement" target="_blank">
+                    <i class="fa fa-github"></i> Ứng dụng nghe nhạc trực tuyến và web quản lí ứng dụng
+                </a><br>
+                <p>Updating...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="coDinh">
+        <p>If you have any questions, please contact me</p>
+        <div class="social">
+            <a href="https://github.com/nvhai272" target="_blank">
+                <i class="fa fa-github"></i> GitHub
+            </a>
+            <a href="https://www.facebook.com/nvhai272" target="_blank">
+                <i class="fa fa-facebook"></i> Facebook
+            </a>
+            <a href="https://www.linkedin.com/in/ha%CC%89i-nguy%C3%AA%CC%83n-8a3339273/" target="_blank">
+                <i class="fa fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://zalo.me/0357769040" target="_blank">
+                <i class="fa fa-comments"></i> Zalo
+            </a>
+        </div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            // Ẩn tất cả các phần
+            document.getElementById("info").style.display = "none";
+            document.getElementById("projects").style.display = "none";
+
+            // Hiện phần được chọn
+            document.getElementById(sectionId).style.display = "block";
+
+            // Xóa class 'active' khỏi tất cả menu
+            let menuItems = document.querySelectorAll(".menu a");
+            menuItems.forEach(item => item.classList.remove("active"));
+
+            // Thêm class 'active' vào menu được chọn
+            let activeMenu = document.querySelector(`.menu a[onclick="showSection('${sectionId}')"]`);
+            if (activeMenu) {
+                activeMenu.classList.add("active");
+            }
+        }
+
+        // Khi tải trang, đảm bảo info hiển thị ban đầu
+        document.addEventListener("DOMContentLoaded", function () {
+            showSection('info');
+        });
+
+    </script>
 </body>
+
 </html>
