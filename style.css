@@ -1,10 +1,11 @@
 body {
   font-family: "Times New Roman", Times, serif;
   background: url("anh2.gif");
-  background-size: contain;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 nav {
@@ -20,7 +21,6 @@ nav {
 
 .navbar-brand {
   font-size: 22px;
-  color: black;
 }
 
 .nav-item {
@@ -199,7 +199,7 @@ footer {
 
   .intro-text p {
     font-size: 14px;
-    color: black;
+    color: white;
   }
 
   .btn-custom {
@@ -226,6 +226,6 @@ footer {
   }
 
   #projects p {
-    color: black;
+    color: white;
   }
 }
