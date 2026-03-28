@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-t border-slate-200 dark:border-[#30363d] bg-slate-50/80 dark:bg-[#0d1117] transition-colors mt-8">
+  <footer class="border-t border-slate-200 dark:border-[#232B3E] bg-slate-50/80 dark:bg-[#0F1219] transition-colors mt-8">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 py-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
         <!-- Logo + motto -->
@@ -23,14 +23,14 @@
             target="_blank"
             rel="noopener"
             aria-label="GitHub"
-            class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#21262d] transition-all"
+            class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#1C2234] transition-all"
           >
             <Github class="size-4" />
           </a>
           <a
             href="mailto:nvhai272@gmail.com"
             aria-label="Email"
-            class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#21262d] transition-all"
+            class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#1C2234] transition-all"
           >
             <Mail class="size-4" />
           </a>
@@ -38,7 +38,7 @@
       </div>
 
       <!-- Bottom copyright -->
-      <div class="mt-6 pt-4 border-t border-slate-200 dark:border-[#30363d] text-center">
+      <div class="mt-6 pt-4 border-t border-slate-200 dark:border-[#232B3E] text-center">
         <p class="text-slate-400 dark:text-slate-500 text-xs">
           {{ $t('footer.copyright') }}
         </p>

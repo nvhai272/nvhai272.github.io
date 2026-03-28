@@ -5,7 +5,7 @@
       <div
         v-for="proj in projects"
         :key="proj.name"
-        class="bg-white dark:bg-[#161b22] rounded-xl border border-slate-200 dark:border-[#30363d] p-5 hover:border-slate-300 dark:hover:border-[#58a6ff] transition-colors"
+        class="bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-5 hover:border-slate-300 dark:hover:border-[#58a6ff] transition-colors"
       >
         <div class="flex items-start justify-between gap-3 flex-wrap">
           <div>

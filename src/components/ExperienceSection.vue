@@ -28,14 +28,14 @@
 
       <div class="relative pl-6 flex flex-col gap-0">
         <!-- Vertical line -->
-        <div class="absolute left-[7px] top-3 bottom-3 w-px bg-gradient-to-b from-[#EC5B13]/50 via-slate-200 dark:via-[#30363d] to-transparent" />
+        <div class="absolute left-[7px] top-3 bottom-3 w-px bg-gradient-to-b from-[#EC5B13]/50 via-slate-200 dark:via-[#232B3E] to-transparent" />
 
         <div v-for="(job, index) in jobs" :key="index" class="relative pb-6 last:pb-0">
           <!-- Timeline dot -->
           <div
             :class="[
-              'absolute -left-6 top-2 size-3.5 rounded-full border-2 bg-white dark:bg-[#0d1117]',
-              index === 0 ? 'border-[#EC5B13]' : 'border-slate-300 dark:border-[#30363d]'
+              'absolute -left-6 top-2 size-3.5 rounded-full border-2 bg-white dark:bg-[#0F1219]',
+              index === 0 ? 'border-[#EC5B13]' : 'border-slate-300 dark:border-[#232B3E]'
             ]"
           >
             <!-- Pulse on current job -->
@@ -45,7 +45,7 @@
             />
           </div>
 
-          <div class="group bg-white dark:bg-[#161b22] rounded-xl border border-slate-200 dark:border-[#30363d] p-4 hover:border-slate-300 dark:hover:border-[#58a6ff]/50 hover:shadow-sm dark:hover:shadow-black/20 transition-all duration-200">
+          <div class="group bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-4 hover:border-slate-300 dark:hover:border-[#58a6ff]/50 hover:shadow-sm dark:hover:shadow-black/20 transition-all duration-200">
             <div class="flex items-start justify-between gap-3 flex-wrap mb-3">
               <div>
                 <p class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">{{ job.role }}</p>
@@ -54,7 +54,7 @@
                   {{ job.company }}
                 </p>
               </div>
-              <span class="text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-[#21262d] px-2.5 py-1 rounded-full whitespace-nowrap font-medium">
+              <span class="text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-[#1C2234] px-2.5 py-1 rounded-full whitespace-nowrap font-medium">
                 {{ job.from }} — {{ job.to === 'present' ? $t('experience.present') : job.to }}
               </span>
             </div>
@@ -65,7 +65,7 @@
               <span
                 v-for="tech in job.tech"
                 :key="tech"
-                class="text-xs px-2 py-0.5 rounded-full bg-slate-100 dark:bg-[#21262d] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#30363d] font-medium"
+                class="text-xs px-2 py-0.5 rounded-full bg-slate-100 dark:bg-[#1C2234] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#232B3E] font-medium"
               >
                 {{ tech }}
               </span>
@@ -88,9 +88,9 @@
         <div class="absolute left-[7px] top-3 bottom-3 w-px bg-gradient-to-b from-blue-400/50 to-transparent" />
 
         <div v-for="(edu, index) in educations" :key="index" class="relative pb-6 last:pb-0">
-          <div class="absolute -left-6 top-2 size-3.5 rounded-full border-2 border-blue-400 bg-white dark:bg-[#0d1117]" />
+          <div class="absolute -left-6 top-2 size-3.5 rounded-full border-2 border-blue-400 bg-white dark:bg-[#0F1219]" />
 
-          <div class="bg-white dark:bg-[#161b22] rounded-xl border border-slate-200 dark:border-[#30363d] p-4 hover:border-slate-300 dark:hover:border-blue-500/30 hover:shadow-sm dark:hover:shadow-black/20 transition-all duration-200">
+          <div class="bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-4 hover:border-slate-300 dark:hover:border-blue-500/30 hover:shadow-sm dark:hover:shadow-black/20 transition-all duration-200">
             <div class="flex items-start justify-between gap-3 flex-wrap">
               <div>
                 <p class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">{{ edu.degree }}</p>
@@ -99,7 +99,7 @@
                   {{ edu.school }}
                 </p>
               </div>
-              <span class="text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-[#21262d] px-2.5 py-1 rounded-full whitespace-nowrap font-medium">
+              <span class="text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-[#1C2234] px-2.5 py-1 rounded-full whitespace-nowrap font-medium">
                 {{ edu.from }} — {{ edu.to === 'present' ? $t('experience.present') : edu.to }}
               </span>
             </div>

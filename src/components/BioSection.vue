@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-white dark:bg-[#161b22] rounded-xl border border-slate-200 dark:border-[#30363d] overflow-hidden transition-colors">
+  <div class="relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] overflow-hidden transition-colors">
     <!-- Orange accent top bar -->
     <div class="h-0.5 w-full bg-gradient-to-r from-[#EC5B13] via-orange-300 to-transparent" />
 
@@ -27,7 +27,7 @@
         <p class="font-medium text-slate-700 dark:text-slate-300">{{ $t('sidebar.the_story.p1') }}</p>
         <p class="text-slate-500 dark:text-slate-400">{{ $t('sidebar.the_story.p2') }}</p>
         <p class="text-slate-500 dark:text-slate-400">{{ $t('sidebar.the_story.p3') }}</p>
-        <p class="italic text-slate-400 dark:text-slate-500 text-sm pt-1 border-t border-slate-100 dark:border-[#30363d]">
+        <p class="italic text-slate-400 dark:text-slate-500 text-sm pt-1 border-t border-slate-100 dark:border-[#232B3E]">
           {{ $t('sidebar.the_story.p4') }}
         </p>
       </div>

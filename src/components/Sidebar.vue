@@ -2,14 +2,14 @@
   <aside :class="['w-full md:w-[272px] lg:w-[296px] shrink-0', mobileOpen ? 'block' : 'hidden md:block']">
     <!-- Avatar card with spinning gradient ring -->
     <div class="relative p-[3px] rounded-xl avatar-ring">
-      <div class="rounded-[10px] overflow-hidden bg-slate-100 dark:bg-[#161b22] relative group">
+      <div class="rounded-[10px] overflow-hidden bg-slate-100 dark:bg-[#141A27] relative group">
         <img
           src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/556909038_4030981993790214_327275188755709228_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHrRayBxMXT1JtN1Guqq40YmEhBmHRk4-WYSEGYdGTj5RRVYR79e4A8JmXalsM5fCnaNjjznX3YyymHATWL9O-8&_nc_ohc=yVXEiG_nZr4Q7kNvwHACsDR&_nc_oc=AdkQYGIAfeIxYkVwfSthtcyQrdvtPDD1Y8-UGU_qUkRCA8LL1aDOhkcmzevuvAT3IQXcODXcERaLuACP8VNFF6ff&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=f0KYr2SvjqauB3U_iBoKLQ&_nc_ss=8&oh=00_AfwzpMQVDlr52a3JB_reAFjDvgj8IsWROYCcvC7QFEPtqw&oe=69B7755C"
           alt="Hai Nguyen"
           class="w-full h-[260px] object-cover object-left-bottom transition-transform duration-500 group-hover:scale-[1.02]"
         />
         <!-- Online indicator -->
-        <div class="absolute bottom-3 right-3 bg-white dark:bg-[#161b22] rounded-full border border-slate-200 dark:border-[#30363d] p-1.5 shadow-sm">
+        <div class="absolute bottom-3 right-3 bg-white dark:bg-[#141A27] rounded-full border border-slate-200 dark:border-[#232B3E] p-1.5 shadow-sm">
           <div class="size-3.5 rounded-full bg-green-500 flex items-center justify-center">
             <div class="size-1.5 rounded-full bg-white" />
           </div>
@@ -25,7 +25,7 @@
 
     <!-- Job title -->
     <div class="mt-2 text-center">
-      <span class="inline-block text-sm font-medium text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-[#21262d] border border-slate-200 dark:border-[#30363d] px-3 py-1 rounded-full">
+      <span class="inline-block text-sm font-medium text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-[#1C2234] border border-slate-200 dark:border-[#232B3E] px-3 py-1 rounded-full">
         {{ $t('sidebar.job_title') }}
       </span>
     </div>
@@ -33,7 +33,7 @@
     <!-- View history button -->
     <button
       @click="$emit('view-history')"
-      class="mt-4 w-full py-2 px-4 rounded-lg border border-slate-200 dark:border-[#30363d] bg-slate-50 dark:bg-[#21262d] text-slate-700 dark:text-slate-200 font-semibold text-sm hover:bg-slate-100 dark:hover:bg-[#30363d] hover:border-slate-300 dark:hover:border-[#58a6ff]/50 transition-all active:scale-[0.98]"
+      class="mt-4 w-full py-2 px-4 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#1C2234] text-slate-700 dark:text-slate-200 font-semibold text-sm hover:bg-slate-100 dark:hover:bg-[#232B3E] hover:border-slate-300 dark:hover:border-[#58a6ff]/50 transition-all active:scale-[0.98]"
     >
       {{ $t('sidebar.view_history') }}
     </button>

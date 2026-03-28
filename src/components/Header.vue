@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-[#0d1117]/90 border-b border-slate-200 dark:border-[#30363d] transition-colors">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#FAFAF7]/90 dark:bg-[#0F1219]/90 border-b border-slate-200 dark:border-[#232B3E] transition-colors">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 h-14 flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center gap-2.5 group cursor-pointer select-none">
@@ -18,18 +18,18 @@
       <div class="flex items-center gap-0.5">
         <button
           @click="toggleLanguage"
-          class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#21262d] hover:text-slate-700 dark:hover:text-slate-200 transition-all text-xs font-medium"
+          class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#1C2234] hover:text-slate-700 dark:hover:text-slate-200 transition-all text-xs font-medium"
           :title="`${$t('header.language')}: ${currentLocale.toUpperCase()}`"
         >
           <Languages class="size-4" />
           <span class="hidden sm:inline">{{ currentLocale.toUpperCase() }}</span>
         </button>
 
-        <div class="w-px h-4 bg-slate-200 dark:bg-[#30363d] mx-1" />
+        <div class="w-px h-4 bg-slate-200 dark:bg-[#232B3E] mx-1" />
 
         <button
           @click="$emit('toggle')"
-          class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#21262d] hover:text-slate-700 dark:hover:text-slate-200 transition-all"
+          class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#1C2234] hover:text-slate-700 dark:hover:text-slate-200 transition-all"
           :aria-label="$t('header.theme')"
         >
           <Sun v-if="dark" class="size-4" />
@@ -38,7 +38,7 @@
 
         <button
           @click="$emit('menu-toggle')"
-          class="md:hidden p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#21262d] transition-all"
+          class="md:hidden p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#1C2234] transition-all"
           :aria-label="$t('header.menu')"
         >
           <Menu class="size-4" />

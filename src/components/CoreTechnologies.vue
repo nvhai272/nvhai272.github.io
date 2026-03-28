@@ -11,7 +11,7 @@
       <div
         v-for="tech in technologies"
         :key="tech.name"
-        :class="['group relative bg-white dark:bg-[#161b22] rounded-xl border border-slate-200 dark:border-[#30363d] p-4 flex gap-3 items-start transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-black/40 overflow-hidden cursor-default tech-card', tech.glow]"
+        :class="['group relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-4 flex gap-3 items-start transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-black/40 overflow-hidden cursor-default tech-card', tech.glow]"
       >
         <!-- Left accent bar on hover -->
         <div :class="['absolute left-0 top-0 bottom-0 w-0.5 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100', tech.accent]" />

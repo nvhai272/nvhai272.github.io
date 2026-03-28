@@ -1,5 +1,5 @@
 <template>
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-4 pb-safe">
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#FAFAF7]/80 dark:bg-[#0F1219]/80 backdrop-blur-md border-t border-slate-200 dark:border-[#232B3E] px-4 pb-safe">
     <div class="flex justify-around items-center h-16 max-w-md mx-auto">
       <button
         v-for="tab in tabs"
@@ -10,7 +10,7 @@
       >
         <div 
           class="p-1 rounded-xl transition-all duration-300"
-          :class="active === tab.id ? 'bg-[#EC5B13]/10 scale-110' : 'group-hover:bg-slate-100 dark:group-hover:bg-slate-800'"
+          :class="active === tab.id ? 'bg-[#EC5B13]/10 scale-110' : 'group-hover:bg-slate-100 dark:group-hover:bg-[#1C2234]'"
         >
           <component :is="tab.icon" class="size-6" />
         </div>

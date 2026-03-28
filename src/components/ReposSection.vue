@@ -2,7 +2,7 @@
   <section class="pb-8">
     <div class="flex items-center justify-between mb-5">
       <div class="flex items-center gap-2">
-        <div class="size-7 rounded-lg bg-slate-100 dark:bg-[#21262d] flex items-center justify-center">
+        <div class="size-7 rounded-lg bg-slate-100 dark:bg-[#1C2234] flex items-center justify-center">
           <FolderGit2 class="size-4 text-slate-600 dark:text-slate-400" />
         </div>
         <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ $t('repos.title') }}</h2>
@@ -24,7 +24,7 @@
       <div
         v-for="i in 6"
         :key="i"
-        class="bg-white dark:bg-[#161b22] rounded-xl border border-slate-200 dark:border-[#30363d] p-5 flex flex-col gap-3 animate-pulse"
+        class="bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-5 flex flex-col gap-3 animate-pulse"
       >
         <div class="flex items-center gap-2">
           <div class="size-4 bg-slate-200 dark:bg-slate-700 rounded" />
@@ -47,7 +47,7 @@
       <p class="text-sm text-slate-500 dark:text-slate-400">{{ $t('repos.error') }}</p>
       <button
         @click="fetchRepos"
-        class="text-xs font-medium px-4 py-1.5 rounded-lg border border-slate-200 dark:border-[#30363d] hover:bg-slate-100 dark:hover:bg-[#21262d] hover:border-slate-300 dark:hover:border-[#58a6ff] transition-all"
+        class="text-xs font-medium px-4 py-1.5 rounded-lg border border-slate-200 dark:border-[#232B3E] hover:bg-slate-100 dark:hover:bg-[#1C2234] hover:border-slate-300 dark:hover:border-[#58a6ff] transition-all"
       >
         {{ $t('repos.retry') }}
       </button>
@@ -61,7 +61,7 @@
         :href="repo.html_url"
         target="_blank"
         rel="noopener"
-        class="group relative bg-white dark:bg-[#161b22] rounded-xl border border-slate-200 dark:border-[#30363d] p-4 flex flex-col gap-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:hover:shadow-black/30 hover:border-[#EC5B13]/40 dark:hover:border-[#EC5B13]/40 overflow-hidden"
+        class="group relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-4 flex flex-col gap-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:hover:shadow-black/30 hover:border-[#EC5B13]/40 dark:hover:border-[#EC5B13]/40 overflow-hidden"
       >
         <!-- Top accent on hover -->
         <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#EC5B13] to-orange-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
