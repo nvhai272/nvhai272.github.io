@@ -1,0 +1,86 @@
+{
+  "header": {
+    "title": "Xin chào thế giới",
+    "language": "Ngôn ngữ",
+    "theme": "Chuyển đổi chủ đề",
+    "menu": "Menu"
+  },
+  "tabs": {
+    "overview": "Tổng quan",
+    "experience": "Kinh nghiệm",
+    "contact": "Liên hệ"
+  },
+  "sidebar": {
+    "job_title": "Nhà phát triển Web",
+    "view_history": "Xem lịch sử",
+    "bio_decide": "1 bộ não, 2 bàn tay, 3 giây để quyết định",
+    "location": "Hà Nội, Việt Nam",
+    "the_story": {
+      "name": "Xin chào thế giới!",
+      "p1": "Đây là nơi tôi giới thiệu bản thân và chia sẻ thông tin liên hệ.",
+      "p2": "Tôi là một web developer hiện đang tập trung vào việc phát triển và bảo trì các ứng dụng web, chủ yếu phục vụ khách hàng tại thị trường Nhật Bản.",
+      "p3": "Tôi luôn sẵn sàng trao đổi, chia sẻ kiến thức và đón nhận những cơ hội mới. Nếu bạn muốn kết nối, đừng ngần ngại liên hệ với tôi.",
+      "p4": "Cảm ơn bạn đã ghé thăm..."
+    }
+  },
+  "technologies": {
+    "title": "Công nghệ cốt lõi",
+    "php_desc": "2 năm kinh nghiệm trong việc phát triển và bảo trì hệ thống doanh nghiệp.",
+    "vue_desc": "Xây dựng các giao diện hiện đại, phản hồi với Composition API và kiến trúc dựa trên component.",
+    "linux_desc": "Môi trường phát triển hàng ngày, quản trị hệ thống và triển khai máy chủ.",
+    "db_desc": "Thiết kế cơ sở dữ liệu, tối ưu hóa truy vấn và mô hình hóa dữ liệu cho các ứng dụng khác nhau.",
+    "other_desc": "Tích hợp các công cụ AI, tài liệu kỹ thuật, Git, Docker và quy trình phát triển."
+  },
+  "repos": {
+    "title": "Repositories",
+    "no_desc": "Chưa có mô tả.",
+    "error": "Không thể tải repositories. Vui lòng thử lại.",
+    "retry": "Thử lại",
+    "view_all": "Xem tất cả trên GitHub"
+  },
+  "experience": {
+    "title": "Kinh nghiệm",
+    "download_cv": "Tải CV",
+    "present": "Hiện tại",
+    "work": "Kinh nghiệm làm việc",
+    "education": "Học vấn",
+    "jobs": {
+      "job1": {
+        "role": "Web Developer",
+        "company": "Công ty (tên công ty của bạn)",
+        "desc": "Phát triển và bảo trì các ứng dụng web phục vụ thị trường Nhật Bản. Làm việc với Laravel, Livewire, Alpine.js và Vue.js để xây dựng các tính năng mới và tối ưu hóa hiệu suất hệ thống."
+      },
+      "job2": {
+        "role": "Junior Web Developer",
+        "company": "Công ty (tên công ty của bạn)",
+        "desc": "Tham gia phát triển các tính năng web cơ bản, bảo trì hệ thống và hỗ trợ team trong các dự án nội bộ."
+      }
+    },
+    "edu": {
+      "degree1": "Kỹ sư Công nghệ Thông tin",
+      "school1": "Trường Đại học (tên trường của bạn)"
+    }
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "intro": "Bạn có dự án muốn thảo luận hoặc cơ hội hợp tác? Hãy gửi tin nhắn cho tôi, tôi sẽ phản hồi sớm nhất có thể.",
+    "form": {
+      "name": "Họ tên",
+      "name_placeholder": "Nguyễn Văn A",
+      "email": "Email",
+      "email_placeholder": "example@email.com",
+      "subject": "Chủ đề",
+      "subject_placeholder": "Cơ hội hợp tác...",
+      "message": "Nội dung",
+      "message_placeholder": "Xin chào! Tôi muốn...",
+      "send": "Gửi tin nhắn",
+      "sending": "Đang gửi...",
+      "success": "Tin nhắn đã được gửi thành công! Tôi sẽ phản hồi sớm.",
+      "error": "Gửi thất bại. Vui lòng thử lại hoặc liên hệ trực tiếp qua email."
+    }
+  },
+  "footer": {
+    "motto": "Xây dựng trang web của ngày mai, mỗi lần commit một bước.",
+    "copyright": "© 2026 Portfolio. Được xây dựng với Tailwind CSS và Tình yêu."
+  }
+}

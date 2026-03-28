@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Package lock (quá lớn, không cần đọc)
+package-lock.json
+
+# Git internals
+.git/
+
+# Editor
+.idea/
+.vscode/

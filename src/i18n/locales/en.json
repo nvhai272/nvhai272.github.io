@@ -1,0 +1,86 @@
+{
+  "header": {
+    "title": "Hello World",
+    "language": "Language",
+    "theme": "Toggle theme",
+    "menu": "Menu"
+  },
+  "tabs": {
+    "overview": "Overview",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "sidebar": {
+    "job_title": "Web Developer",
+    "view_history": "View History",
+    "bio_decide": "1 brain, 2 hands, 3 seconds to decide",
+    "location": "Ha Noi, Viet Nam",
+    "the_story": {
+      "name": "Hello World!",
+      "p1": "This is where I introduce myself and share my contact information.",
+      "p2": "I am a web developer currently focused on building and maintaining web applications, primarily serving clients in the Japanese market.",
+      "p3": "I am always open to meaningful conversations, knowledge sharing, and new opportunities. If you'd like to connect, don't hesitate to reach out.",
+      "p4": "Thank you for visiting..."
+    }
+  },
+  "technologies": {
+    "title": "Core Technologies",
+    "php_desc": "2 years of experience in enterprise system development and maintenance.",
+    "vue_desc": "Building modern, reactive UIs with Composition API and component-based architecture.",
+    "linux_desc": "Daily development environment, system administration, and server deployment.",
+    "db_desc": "Database design, query optimization, and data modeling for various applications.",
+    "other_desc": "AI tools integration, technical documentation, Git, Docker, and development workflows."
+  },
+  "repos": {
+    "title": "Repositories",
+    "no_desc": "No description provided.",
+    "error": "Failed to load repositories. Please try again.",
+    "retry": "Retry",
+    "view_all": "View all on GitHub"
+  },
+  "experience": {
+    "title": "Experience",
+    "download_cv": "Download CV",
+    "present": "Present",
+    "work": "Work Experience",
+    "education": "Education",
+    "jobs": {
+      "job1": {
+        "role": "Web Developer",
+        "company": "Company (your company name)",
+        "desc": "Developed and maintained web applications for the Japanese market. Built new features and optimized system performance using Laravel, Livewire, Alpine.js, and Vue.js."
+      },
+      "job2": {
+        "role": "Junior Web Developer",
+        "company": "Company (your company name)",
+        "desc": "Contributed to basic web feature development, system maintenance, and supported the team on internal projects."
+      }
+    },
+    "edu": {
+      "degree1": "Bachelor of Information Technology",
+      "school1": "University (your university name)"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Have a project to discuss or a collaboration opportunity? Send me a message and I'll get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "John Doe",
+      "email": "Email",
+      "email_placeholder": "example@email.com",
+      "subject": "Subject",
+      "subject_placeholder": "Collaboration opportunity...",
+      "message": "Message",
+      "message_placeholder": "Hello! I'd like to...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! I'll reply soon.",
+      "error": "Failed to send. Please try again or contact me directly via email."
+    }
+  },
+  "footer": {
+    "motto": "Building the web of tomorrow, one commit at a time.",
+    "copyright": "© 2026 Portfolio. Built with Tailwind CSS and Love."
+  }
+}
