@@ -59,6 +59,11 @@ export default {
           ring: 'var(--sidebar-ring)',
         },
       },
+      fontFamily: {
+        sans: ['DM Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Syne', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+      },
       borderRadius: {
         sm: 'calc(var(--radius) - 4px)',
         md: 'calc(var(--radius) - 2px)',

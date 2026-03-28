@@ -4,7 +4,7 @@
       <div class="size-7 rounded-lg bg-[#EC5B13]/10 flex items-center justify-center">
         <Mail class="size-4 text-[#EC5B13]" />
       </div>
-      <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ $t('contact.title') }}</h2>
+      <h2 class="font-display text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">{{ $t('contact.title') }}</h2>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-5">
@@ -62,7 +62,7 @@
         >
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
-              <label class="text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wide">
+              <label class="font-display text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-[0.15em]">
                 {{ $t('contact.form.name') }}
               </label>
               <input
@@ -74,7 +74,7 @@
               />
             </div>
             <div class="flex flex-col gap-1.5">
-              <label class="text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wide">
+              <label class="font-display text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-[0.15em]">
                 {{ $t('contact.form.email') }}
               </label>
               <input

@@ -10,7 +10,7 @@
       <!-- Header -->
       <div class="flex items-start justify-between mb-5 gap-3">
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+          <h2 class="font-display text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-2 flex items-center gap-2">
             <span class="text-pink-400 text-base animate-sparkle">✦</span>
             {{ $t('sidebar.the_story.name') }}
           </h2>

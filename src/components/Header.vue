@@ -7,10 +7,10 @@
           <Code2 class="size-4 text-white" />
         </div>
         <div class="flex items-baseline gap-px">
-          <span class="font-bold text-base sm:text-lg tracking-tight bg-gradient-to-r from-[#EC5B13] via-orange-400 to-amber-400 bg-clip-text text-transparent">
+          <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight bg-gradient-to-r from-[#EC5B13] via-orange-400 to-amber-400 bg-clip-text text-transparent">
             {{ $t('header.title') }}
           </span>
-          <span class="text-[#EC5B13] font-bold text-base sm:text-lg leading-none cursor-blink">_</span>
+          <span class="text-[#EC5B13] font-display font-extrabold text-lg sm:text-xl leading-none cursor-blink">_</span>
         </div>
       </div>
 

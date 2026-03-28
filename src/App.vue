@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen bg-[#FAFAF7] dark:bg-[#0F1219] text-slate-900 dark:text-white transition-colors font-sans">
+  <div class="flex flex-col min-h-screen bg-[#FAFAF7] dark:bg-[#0F1219] text-slate-900 dark:text-white transition-colors font-sans antialiased">
     <SakuraPetals />
     <Header :dark="dark" @toggle="toggleDark" @menu-toggle="toggleMobileMenu"></Header>
 

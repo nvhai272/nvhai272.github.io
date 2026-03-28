@@ -1,6 +1,6 @@
 <template>
   <section class="pb-8">
-    <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-5">{{ $t('projects.title') }}</h2>
+    <h2 class="font-display text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-5">{{ $t('projects.title') }}</h2>
     <div class="flex flex-col gap-3">
       <div
         v-for="proj in projects"

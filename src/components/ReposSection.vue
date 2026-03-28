@@ -5,7 +5,7 @@
         <div class="size-7 rounded-lg bg-slate-100 dark:bg-[#1C2234] flex items-center justify-center">
           <FolderGit2 class="size-4 text-slate-600 dark:text-slate-400" />
         </div>
-        <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ $t('repos.title') }}</h2>
+        <h2 class="font-display text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">{{ $t('repos.title') }}</h2>
       </div>
       <a
         v-if="!loading && !error"

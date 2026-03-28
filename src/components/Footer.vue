@@ -8,7 +8,7 @@
             <div class="size-6 rounded-md bg-[#EC5B13]/10 border border-[#EC5B13]/20 flex items-center justify-center">
               <Code2 class="size-3.5 text-[#EC5B13]" />
             </div>
-            <span class="text-[#EC5B13] font-bold text-sm">Code For Life</span>
+            <span class="font-display font-extrabold text-sm tracking-tight text-[#EC5B13]">Code For Life</span>
           </div>
           <span class="hidden sm:inline text-slate-300 dark:text-slate-700">·</span>
           <p class="text-slate-400 dark:text-slate-500 text-xs text-center sm:text-left">

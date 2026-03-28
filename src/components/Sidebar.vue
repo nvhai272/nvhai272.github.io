@@ -19,13 +19,13 @@
 
     <!-- Name & username -->
     <div class="mt-4 flex flex-col items-center">
-      <h1 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Nguyen Van Hai</h1>
-      <p class="text-slate-400 dark:text-slate-500 text-sm font-mono mt-0.5">@nvhai272</p>
+      <h1 class="font-display text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">Nguyen Van Hai</h1>
+      <p class="text-slate-400 dark:text-slate-500 text-xs font-mono tracking-wider mt-1">@nvhai272</p>
     </div>
 
     <!-- Job title -->
     <div class="mt-2 text-center">
-      <span class="inline-block text-sm font-medium text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-[#1C2234] border border-slate-200 dark:border-[#232B3E] px-3 py-1 rounded-full">
+      <span class="inline-block text-xs font-display font-semibold tracking-wide text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-[#1C2234] border border-slate-200 dark:border-[#232B3E] px-3 py-1 rounded-full">
         {{ $t('sidebar.job_title') }}
       </span>
     </div>

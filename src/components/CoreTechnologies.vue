@@ -4,7 +4,7 @@
       <div class="size-7 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
         <Grid3x3 class="size-4 text-blue-500" />
       </div>
-      <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ $t('technologies.title') }}</h2>
+      <h2 class="font-display text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">{{ $t('technologies.title') }}</h2>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -22,7 +22,7 @@
 
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2 mb-1">
-            <span class="font-semibold text-slate-900 dark:text-white text-sm leading-tight">{{ tech.name }}</span>
+            <span class="font-display font-semibold tracking-tight text-slate-900 dark:text-white text-sm leading-tight">{{ tech.name }}</span>
           </div>
           <p class="text-slate-500 dark:text-slate-400 text-xs leading-[1.6]">{{ tech.desc }}</p>
         </div>
