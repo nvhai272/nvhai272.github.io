@@ -19,7 +19,7 @@
 
     <!-- Name & username -->
     <div class="mt-4 flex flex-col items-center">
-      <h1 class="font-display text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">Nguyen Van Hai</h1>
+      <h1 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white leading-tight">Nguyen Van Hai</h1>
       <p class="text-slate-400 dark:text-slate-500 text-xs font-mono tracking-wider mt-1">@nvhai272</p>
     </div>
 

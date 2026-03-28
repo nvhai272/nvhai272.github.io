@@ -19,15 +19,15 @@
             Open to opportunities
           </span>
         </div>
-        <span class="text-6xl font-serif text-[#EC5B13]/15 dark:text-[#EC5B13]/20 leading-none select-none -mt-1">"</span>
+        <span class="font-display text-6xl italic text-[#EC5B13]/20 dark:text-[#EC5B13]/25 leading-none select-none -mt-2">"</span>
       </div>
 
       <!-- Bio content -->
-      <div class="space-y-3 text-sm sm:text-base leading-relaxed">
+      <div class="space-y-3 text-sm sm:text-base leading-[1.8]">
         <p class="font-medium text-slate-700 dark:text-slate-300">{{ $t('sidebar.the_story.p1') }}</p>
         <p class="text-slate-500 dark:text-slate-400">{{ $t('sidebar.the_story.p2') }}</p>
         <p class="text-slate-500 dark:text-slate-400">{{ $t('sidebar.the_story.p3') }}</p>
-        <p class="italic text-slate-400 dark:text-slate-500 text-sm pt-1 border-t border-slate-100 dark:border-[#232B3E]">
+        <p class="font-display italic text-slate-400 dark:text-slate-500 text-sm pt-2 border-t border-slate-100 dark:border-[#232B3E]">
           {{ $t('sidebar.the_story.p4') }}
         </p>
       </div>
