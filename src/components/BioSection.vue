@@ -1,7 +1,7 @@
 <template>
   <div class="relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] overflow-hidden transition-colors">
     <!-- Orange accent top bar -->
-    <div class="h-0.5 w-full bg-gradient-to-r from-[#EC5B13] via-orange-300 to-transparent" />
+    <div class="h-0.5 w-full bg-gradient-to-r from-[#EC5B13] via-orange-400 to-[#0EA5E9]" />
 
     <!-- Kanji watermark -->
     <span class="absolute -right-3 -bottom-4 text-[110px] font-bold leading-none select-none pointer-events-none text-slate-900/[0.03] dark:text-white/[0.04]">夢</span>

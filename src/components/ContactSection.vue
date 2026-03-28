@@ -12,7 +12,7 @@
       <div class="lg:col-span-2 flex flex-col gap-4">
         <!-- Intro card -->
         <div class="relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-5 overflow-hidden">
-          <div class="h-0.5 w-full bg-gradient-to-r from-[#EC5B13] via-orange-300 to-transparent absolute top-0 left-0" />
+          <div class="h-0.5 w-full bg-gradient-to-r from-[#EC5B13] via-orange-400 to-[#0EA5E9] absolute top-0 left-0" />
           <p class="text-slate-600 dark:text-slate-300 text-sm leading-6 mb-5">{{ $t('contact.intro') }}</p>
 
           <!-- Availability -->
@@ -131,7 +131,7 @@
           <button
             type="submit"
             :disabled="loading"
-            class="flex items-center justify-center gap-2 py-2.5 px-5 rounded-lg bg-[#EC5B13] text-white font-semibold text-sm hover:bg-[#d44f0e] disabled:opacity-60 disabled:cursor-not-allowed transition-all hover:shadow-md hover:shadow-[#EC5B13]/20 active:scale-[0.98]"
+            class="flex items-center justify-center gap-2 py-2.5 px-5 rounded-lg bg-gradient-to-r from-[#EC5B13] to-[#0EA5E9] text-white font-semibold text-sm hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed transition-all hover:shadow-md hover:shadow-[#0EA5E9]/20 active:scale-[0.98]"
           >
             <Loader2 v-if="loading" class="size-4 animate-spin" />
             <Send v-else class="size-4" />

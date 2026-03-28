@@ -10,7 +10,7 @@
       <a
         href="/cv.pdf"
         download
-        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#EC5B13] text-white text-xs font-semibold hover:bg-[#d44f0e] transition-all hover:shadow-md hover:shadow-[#EC5B13]/20 active:scale-95"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#EC5B13] to-[#0EA5E9] text-white text-xs font-semibold hover:opacity-90 transition-all hover:shadow-md hover:shadow-[#0EA5E9]/20 active:scale-95"
       >
         <Download class="size-3.5" />
         {{ $t('experience.download_cv') }}
@@ -28,7 +28,7 @@
 
       <div class="relative pl-6 flex flex-col gap-0">
         <!-- Vertical line -->
-        <div class="absolute left-[7px] top-3 bottom-3 w-px bg-gradient-to-b from-[#EC5B13]/50 via-slate-200 dark:via-[#232B3E] to-transparent" />
+        <div class="absolute left-[7px] top-3 bottom-3 w-px bg-gradient-to-b from-[#EC5B13]/70 to-[#0EA5E9]/50" />
 
         <div v-for="(job, index) in jobs" :key="index" class="relative pb-6 last:pb-0">
           <!-- Timeline dot -->

@@ -64,7 +64,7 @@
         class="group relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-4 flex flex-col gap-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:hover:shadow-black/30 hover:border-[#EC5B13]/40 dark:hover:border-[#EC5B13]/40 overflow-hidden"
       >
         <!-- Top accent on hover -->
-        <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#EC5B13] to-orange-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+        <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#EC5B13] to-[#0EA5E9] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
 
         <div class="flex-1">
           <div class="flex items-center gap-1.5 mb-2">
