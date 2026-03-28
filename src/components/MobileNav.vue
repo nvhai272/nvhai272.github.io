@@ -6,11 +6,11 @@
         :key="tab.id"
         @click="$emit('change', tab.id)"
         class="flex flex-col items-center justify-center gap-1 w-full relative group"
-        :class="active === tab.id ? 'text-[#0EA5E9]' : 'text-slate-500 dark:text-slate-400'"
+        :class="active === tab.id ? 'text-[#EC5B13]' : 'text-slate-500 dark:text-slate-400'"
       >
         <div 
           class="p-1 rounded-xl transition-all duration-300"
-          :class="active === tab.id ? 'bg-[#0EA5E9]/10 scale-110' : 'group-hover:bg-slate-100 dark:group-hover:bg-[#1C2234]'"
+          :class="active === tab.id ? 'bg-[#EC5B13]/10 scale-110' : 'group-hover:bg-slate-100 dark:group-hover:bg-[#1C2234]'"
         >
           <component :is="tab.icon" class="size-6" />
         </div>
@@ -21,7 +21,7 @@
         <!-- Indicator dot -->
         <div 
           v-if="active === tab.id"
-          class="absolute -top-1 size-1 bg-[#0EA5E9] rounded-full"
+          class="absolute -top-1 size-1 bg-[#EC5B13] rounded-full"
         ></div>
       </button>
     </div>

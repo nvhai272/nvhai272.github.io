@@ -12,7 +12,7 @@
         href="https://github.com/nvhai272?tab=repositories"
         target="_blank"
         rel="noopener"
-        class="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400 hover:text-[#0EA5E9] transition-colors"
+        class="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400 hover:text-[#EC5B13] transition-colors"
       >
         {{ $t('repos.view_all') }}
         <ExternalLink class="size-3" />
@@ -61,15 +61,15 @@
         :href="repo.html_url"
         target="_blank"
         rel="noopener"
-        class="group relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-4 flex flex-col gap-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:hover:shadow-black/30 hover:border-[#0EA5E9]/40 dark:hover:border-[#0EA5E9]/40 overflow-hidden"
+        class="group relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-4 flex flex-col gap-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:hover:shadow-black/30 hover:border-[#EC5B13]/40 dark:hover:border-[#EC5B13]/40 overflow-hidden"
       >
         <!-- Top accent on hover -->
-        <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#0EA5E9] to-sky-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+        <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#EC5B13] to-orange-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
 
         <div class="flex-1">
           <div class="flex items-center gap-1.5 mb-2">
             <BookMarked class="size-3.5 text-slate-400 shrink-0" />
-            <span class="text-[#0EA5E9] font-semibold text-sm truncate group-hover:underline">{{ repo.name }}</span>
+            <span class="text-[#EC5B13] font-semibold text-sm truncate group-hover:underline">{{ repo.name }}</span>
             <span
               v-if="repo.private"
               class="text-[10px] border border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 px-1.5 py-0.5 rounded-full ml-auto shrink-0"

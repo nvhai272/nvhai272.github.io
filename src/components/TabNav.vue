@@ -7,13 +7,13 @@
       :class="[
         'flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap shrink-0',
         active === tab.id
-          ? 'bg-[#0EA5E9]/10 dark:bg-[#0EA5E9]/15 text-[#0EA5E9] border border-[#0EA5E9]/30'
+          ? 'bg-[#EC5B13]/10 dark:bg-[#EC5B13]/15 text-[#EC5B13] border border-[#EC5B13]/30'
           : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#1C2234] border border-transparent'
       ]"
     >
       <component
         :is="tab.icon"
-        :class="['size-3.5 shrink-0', active === tab.id ? 'text-[#0EA5E9]' : 'text-slate-400 dark:text-slate-500']"
+        :class="['size-3.5 shrink-0', active === tab.id ? 'text-[#EC5B13]' : 'text-slate-400 dark:text-slate-500']"
       />
       {{ tab.label }}
     </button>

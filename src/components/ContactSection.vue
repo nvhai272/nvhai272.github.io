@@ -1,8 +1,8 @@
 <template>
   <section class="pb-8">
     <div class="flex items-center gap-2 mb-6">
-      <div class="size-7 rounded-lg bg-[#0EA5E9]/10 flex items-center justify-center">
-        <Mail class="size-4 text-[#0EA5E9]" />
+      <div class="size-7 rounded-lg bg-[#EC5B13]/10 flex items-center justify-center">
+        <Mail class="size-4 text-[#EC5B13]" />
       </div>
       <h2 class="font-display text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">{{ $t('contact.title') }}</h2>
     </div>
@@ -12,7 +12,7 @@
       <div class="lg:col-span-2 flex flex-col gap-4">
         <!-- Intro card -->
         <div class="relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-5 overflow-hidden">
-          <div class="h-0.5 w-full bg-gradient-to-r from-[#0EA5E9] via-sky-300 to-transparent absolute top-0 left-0" />
+          <div class="h-0.5 w-full bg-gradient-to-r from-[#EC5B13] via-orange-300 to-transparent absolute top-0 left-0" />
           <p class="text-slate-600 dark:text-slate-300 text-sm leading-6 mb-5">{{ $t('contact.intro') }}</p>
 
           <!-- Availability -->
@@ -24,10 +24,10 @@
           <div class="flex flex-col gap-2.5">
             <a
               href="mailto:nvhai272@gmail.com"
-              class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300 hover:text-[#0EA5E9] transition-colors group"
+              class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300 hover:text-[#EC5B13] transition-colors group"
             >
-              <div class="size-8 rounded-lg bg-slate-100 dark:bg-[#1C2234] flex items-center justify-center shrink-0 group-hover:bg-[#0EA5E9]/10 transition-colors">
-                <Mail class="size-3.5 text-slate-400 group-hover:text-[#0EA5E9] transition-colors" />
+              <div class="size-8 rounded-lg bg-slate-100 dark:bg-[#1C2234] flex items-center justify-center shrink-0 group-hover:bg-[#EC5B13]/10 transition-colors">
+                <Mail class="size-3.5 text-slate-400 group-hover:text-[#EC5B13] transition-colors" />
               </div>
               <span class="truncate text-xs">nvhai272@gmail.com</span>
             </a>
@@ -36,10 +36,10 @@
               href="https://github.com/nvhai272"
               target="_blank"
               rel="noopener"
-              class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300 hover:text-[#0EA5E9] transition-colors group"
+              class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300 hover:text-[#EC5B13] transition-colors group"
             >
-              <div class="size-8 rounded-lg bg-slate-100 dark:bg-[#1C2234] flex items-center justify-center shrink-0 group-hover:bg-[#0EA5E9]/10 transition-colors">
-                <Github class="size-3.5 text-slate-400 group-hover:text-[#0EA5E9] transition-colors" />
+              <div class="size-8 rounded-lg bg-slate-100 dark:bg-[#1C2234] flex items-center justify-center shrink-0 group-hover:bg-[#EC5B13]/10 transition-colors">
+                <Github class="size-3.5 text-slate-400 group-hover:text-[#EC5B13] transition-colors" />
               </div>
               <span class="text-xs">github.com/nvhai272</span>
             </a>
@@ -70,7 +70,7 @@
                 type="text"
                 required
                 :placeholder="$t('contact.form.name_placeholder')"
-                class="px-3 py-2.5 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#0F1219] text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]/30 focus:border-[#0EA5E9] transition-all"
+                class="px-3 py-2.5 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#0F1219] text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#EC5B13]/30 focus:border-[#EC5B13] transition-all"
               />
             </div>
             <div class="flex flex-col gap-1.5">
@@ -82,7 +82,7 @@
                 type="email"
                 required
                 :placeholder="$t('contact.form.email_placeholder')"
-                class="px-3 py-2.5 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#0F1219] text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]/30 focus:border-[#0EA5E9] transition-all"
+                class="px-3 py-2.5 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#0F1219] text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#EC5B13]/30 focus:border-[#EC5B13] transition-all"
               />
             </div>
           </div>
@@ -95,7 +95,7 @@
               v-model="form.subject"
               type="text"
               :placeholder="$t('contact.form.subject_placeholder')"
-              class="px-3 py-2.5 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#0F1219] text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]/30 focus:border-[#0EA5E9] transition-all"
+              class="px-3 py-2.5 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#0F1219] text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#EC5B13]/30 focus:border-[#EC5B13] transition-all"
             />
           </div>
 
@@ -108,7 +108,7 @@
               required
               rows="5"
               :placeholder="$t('contact.form.message_placeholder')"
-              class="px-3 py-2.5 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#0F1219] text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]/30 focus:border-[#0EA5E9] transition-all resize-none"
+              class="px-3 py-2.5 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#0F1219] text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#EC5B13]/30 focus:border-[#EC5B13] transition-all resize-none"
             />
           </div>
 
@@ -131,7 +131,7 @@
           <button
             type="submit"
             :disabled="loading"
-            class="flex items-center justify-center gap-2 py-2.5 px-5 rounded-lg bg-[#0EA5E9] text-white font-semibold text-sm hover:bg-[#0284C7] disabled:opacity-60 disabled:cursor-not-allowed transition-all hover:shadow-md hover:shadow-[#0EA5E9]/20 active:scale-[0.98]"
+            class="flex items-center justify-center gap-2 py-2.5 px-5 rounded-lg bg-[#EC5B13] text-white font-semibold text-sm hover:bg-[#d44f0e] disabled:opacity-60 disabled:cursor-not-allowed transition-all hover:shadow-md hover:shadow-[#EC5B13]/20 active:scale-[0.98]"
           >
             <Loader2 v-if="loading" class="size-4 animate-spin" />
             <Send v-else class="size-4" />

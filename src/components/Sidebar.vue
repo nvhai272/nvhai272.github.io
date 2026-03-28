@@ -50,7 +50,7 @@
           :is="item.link ? 'a' : 'span'"
           :href="item.link"
           :class="item.link
-            ? 'text-sm text-slate-600 dark:text-slate-300 hover:text-[#0EA5E9] transition-colors truncate'
+            ? 'text-sm text-slate-600 dark:text-slate-300 hover:text-[#EC5B13] transition-colors truncate'
             : 'text-sm text-slate-600 dark:text-slate-300 truncate'"
         >
           {{ item.text }}
@@ -124,14 +124,14 @@ onUnmounted(() => clearInterval(interval))
 .avatar-ring {
   background: conic-gradient(
     from 0deg,
-    #0EA5E9,
-    #38bdf8,
-    #7dd3fc,
+    #EC5B13,
+    #f97316,
+    #fb923c,
     #f472b6,
     #a78bfa,
     #38bdf8,
     #34d399,
-    #0EA5E9
+    #EC5B13
   );
   animation: spin-ring 4s linear infinite;
 }
