@@ -2,15 +2,15 @@
   <section class="pb-8">
     <div class="flex items-center justify-between mb-6">
       <div class="flex items-center gap-2">
-        <div class="size-7 rounded-lg bg-[#EC5B13]/10 flex items-center justify-center">
-          <BriefcaseBusiness class="size-4 text-[#EC5B13]" />
+        <div class="size-7 rounded-lg bg-[#0EA5E9]/10 flex items-center justify-center">
+          <BriefcaseBusiness class="size-4 text-[#0EA5E9]" />
         </div>
         <h2 class="font-display text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">{{ $t('experience.title') }}</h2>
       </div>
       <a
         href="/cv.pdf"
         download
-        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#EC5B13] text-white text-xs font-semibold hover:bg-[#d44f0e] transition-all hover:shadow-md hover:shadow-[#EC5B13]/20 active:scale-95"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0EA5E9] text-white text-xs font-semibold hover:bg-[#0284C7] transition-all hover:shadow-md hover:shadow-[#0EA5E9]/20 active:scale-95"
       >
         <Download class="size-3.5" />
         {{ $t('experience.download_cv') }}
@@ -28,20 +28,20 @@
 
       <div class="relative pl-6 flex flex-col gap-0">
         <!-- Vertical line -->
-        <div class="absolute left-[7px] top-3 bottom-3 w-px bg-gradient-to-b from-[#EC5B13]/50 via-slate-200 dark:via-[#232B3E] to-transparent" />
+        <div class="absolute left-[7px] top-3 bottom-3 w-px bg-gradient-to-b from-[#0EA5E9]/50 via-slate-200 dark:via-[#232B3E] to-transparent" />
 
         <div v-for="(job, index) in jobs" :key="index" class="relative pb-6 last:pb-0">
           <!-- Timeline dot -->
           <div
             :class="[
               'absolute -left-6 top-2 size-3.5 rounded-full border-2 bg-white dark:bg-[#0F1219]',
-              index === 0 ? 'border-[#EC5B13]' : 'border-slate-300 dark:border-[#232B3E]'
+              index === 0 ? 'border-[#0EA5E9]' : 'border-slate-300 dark:border-[#232B3E]'
             ]"
           >
             <!-- Pulse on current job -->
             <span
               v-if="index === 0"
-              class="absolute inset-0 rounded-full bg-[#EC5B13]/30 animate-ping"
+              class="absolute inset-0 rounded-full bg-[#0EA5E9]/30 animate-ping"
             />
           </div>
 
@@ -49,7 +49,7 @@
             <div class="flex items-start justify-between gap-3 flex-wrap mb-3">
               <div>
                 <p class="font-display font-bold tracking-tight text-slate-900 dark:text-white text-sm sm:text-base">{{ job.role }}</p>
-                <p class="text-[#EC5B13] text-xs font-semibold mt-0.5 flex items-center gap-1">
+                <p class="text-[#0EA5E9] text-xs font-semibold mt-0.5 flex items-center gap-1">
                   <Building2 class="size-3 shrink-0" />
                   {{ job.company }}
                 </p>

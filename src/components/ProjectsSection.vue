@@ -9,7 +9,7 @@
       >
         <div class="flex items-start justify-between gap-3 flex-wrap">
           <div>
-            <a href="#" class="text-[#EC5B13] font-semibold text-base hover:underline">{{ proj.name }}</a>
+            <a href="#" class="text-[#0EA5E9] font-semibold text-base hover:underline">{{ proj.name }}</a>
             <p class="text-slate-500 dark:text-slate-400 text-sm mt-1 leading-5">{{ proj.desc }}</p>
           </div>
           <span :class="['text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wide shrink-0', statusColor[proj.status]]">
