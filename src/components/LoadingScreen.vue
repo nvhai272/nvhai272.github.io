@@ -21,7 +21,6 @@ defineEmits<{ done: [] }>()
 
 const TEXT = 'CODE FOR LIFE'
 const TYPE_SPEED = 90   // ms mỗi ký tự
-const HOLD = 800        // ms giữ sau khi gõ xong
 const FADE_DELAY = 3000 // tổng thời gian trước khi fade out
 
 const displayed = ref('')

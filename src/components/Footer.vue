@@ -69,7 +69,6 @@
 
 <script setup lang="ts">
 import { Github as GithubIcon, Youtube as YoutubeIcon, Facebook as FacebookIcon } from 'lucide-vue-next'
-import { CodeBracketIcon } from '@heroicons/vue/20/solid'
 
 defineProps<{
   dark: boolean

@@ -73,11 +73,11 @@ const { locale } = useI18n()
 
 const currentLocale = computed(() => locale.value)
 
-const toggleLanguage = () => {
-  const newLocale = locale.value === 'vi' ? 'en' : 'vi'
-  locale.value = newLocale
-  localStorage.setItem('locale', newLocale)
-}
+// const toggleLanguage = () => {
+//   const newLocale = locale.value === 'vi' ? 'en' : 'vi'
+//   locale.value = newLocale
+//   localStorage.setItem('locale', newLocale)
+// }
 </script>
 
 <style scoped>
