@@ -68,7 +68,7 @@
       "name": "Họ tên",
       "name_placeholder": "Nguyễn Văn A",
       "email": "Email",
-      "email_placeholder": "example@email.com",
+      "email_placeholder": "example{'@'}email.com",
       "subject": "Chủ đề",
       "subject_placeholder": "Cơ hội hợp tác...",
       "message": "Nội dung",
