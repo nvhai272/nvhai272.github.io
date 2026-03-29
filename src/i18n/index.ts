@@ -5,9 +5,9 @@ import vi from './locales/vi.json'
 // Get saved locale or default to 'vi'
 const getInitialLocale = () => {
   if (typeof window !== 'undefined') {
-    return localStorage.getItem('locale') || 'vi'
+    return localStorage.getItem('locale') || 'en'
   }
-  return 'vi'
+  return 'en'
 }
 
 const i18n = createI18n({

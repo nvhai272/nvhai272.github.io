@@ -3,25 +3,26 @@
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 h-14 flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center gap-2.5 group cursor-pointer select-none">
-        <div class="relative size-8 rounded-xl bg-gradient-to-br from-[#EC5B13] to-[#0EA5E9] flex items-center justify-center shadow-sm shadow-[#EC5B13]/30 group-hover:shadow-[#0EA5E9]/40 group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
-          <Code2 class="size-4 text-white" />
+        <div class="relative size-8 rounded-xl bg-gradient-to-br from-[#38bdf8] to-[#f472b6] flex items-center justify-center shadow-sm shadow-[#38bdf8]/30 group-hover:shadow-[#f472b6]/40 group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
+          <CodeBracketIcon class="size-4 text-white" />
         </div>
         <div class="flex items-baseline gap-px">
-          <span class="font-display font-bold text-xl sm:text-2xl bg-gradient-to-r from-[#EC5B13] via-orange-400 to-[#0EA5E9] bg-clip-text text-transparent leading-none">
-            {{ $t('header.title') }}
+          <span class="font-bold text-xl sm:text-2xl bg-gradient-to-r from-[#38bdf8] via-[#818cf8] to-[#f472b6] bg-clip-text text-transparent leading-none">
+            Code For Life
           </span>
-          <span class="text-[#EC5B13] font-display font-bold text-xl sm:text-2xl leading-none cursor-blink">_</span>
+          <span class="text-[#f472b6] font-bold text-xl sm:text-2xl leading-none cursor-blink">_</span>
         </div>
       </div>
 
       <!-- Actions -->
       <div class="flex items-center gap-0.5">
+        <!-- @click="toggleLanguage" -->
         <button
-          @click="toggleLanguage"
-          class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#1C2234] hover:text-slate-700 dark:hover:text-slate-200 transition-all text-xs font-medium"
+          @click=""
+          class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-[#232B3E] text-slate-500 dark:text-slate-400 hover:border-slate-300 dark:hover:border-[#58a6ff] hover:bg-slate-100 dark:hover:bg-[#1C2234] hover:text-slate-700 dark:hover:text-slate-200 transition-all shadow-sm text-xs font-bold"
           :title="`${$t('header.language')}: ${currentLocale.toUpperCase()}`"
         >
-          <Languages class="size-4" />
+          <LanguageIcon class="size-4" />
           <span class="hidden sm:inline">{{ currentLocale.toUpperCase() }}</span>
         </button>
 
@@ -29,19 +30,24 @@
 
         <button
           @click="$emit('toggle')"
-          class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#1C2234] hover:text-slate-700 dark:hover:text-slate-200 transition-all"
+          class="p-2 rounded-lg border border-slate-200 dark:border-[#232B3E] text-slate-500 dark:text-slate-400 hover:border-slate-300 dark:hover:border-[#58a6ff] hover:bg-slate-100 dark:hover:bg-[#1C2234] hover:text-slate-700 dark:hover:text-slate-200 transition-all shadow-sm"
           :aria-label="$t('header.theme')"
         >
-          <Sun v-if="dark" class="size-4" />
-          <Moon v-else class="size-4" />
+          <SunIcon v-if="dark" class="size-4" />
+          <MoonIcon v-else class="size-4" />
         </button>
 
         <button
           @click="$emit('menu-toggle')"
-          class="md:hidden p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#1C2234] transition-all"
+          :class="[
+            'md:hidden p-2 rounded-lg border transition-all shadow-sm',
+            menuOpen
+              ? 'border-[#38bdf8] bg-[#38bdf8]/10 text-[#38bdf8]'
+              : 'border-slate-200 dark:border-[#232B3E] text-slate-500 dark:text-slate-400 hover:border-slate-300 dark:hover:border-[#58a6ff] hover:bg-slate-100 dark:hover:bg-[#1C2234]'
+          ]"
           :aria-label="$t('header.menu')"
         >
-          <Menu class="size-4" />
+          <Bars3Icon class="size-4" />
         </button>
       </div>
     </div>
@@ -50,11 +56,12 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { Code2, Languages, Sun, Moon, Menu } from 'lucide-vue-next'
+import { CodeBracketIcon, LanguageIcon, SunIcon, MoonIcon, Bars3Icon } from '@heroicons/vue/20/solid'
 import { useI18n } from 'vue-i18n'
 
 defineProps<{
   dark: boolean
+  menuOpen: boolean
 }>()
 
 defineEmits<{

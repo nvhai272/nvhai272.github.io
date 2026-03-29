@@ -2,9 +2,9 @@
   <section>
     <div class="flex items-center gap-2 mb-5">
       <div class="size-7 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
-        <Grid3x3 class="size-4 text-blue-500" />
+        <Cpu class="size-4 text-green-500" />
       </div>
-      <h2 class="font-display text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">{{ $t('technologies.title') }}</h2>
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-green-500">{{ $t('technologies.title') }}</h2>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -22,7 +22,7 @@
 
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2 mb-1">
-            <span class="font-display font-semibold tracking-tight text-slate-900 dark:text-white text-sm leading-tight">{{ tech.name }}</span>
+            <span class="font-semibold tracking-tight text-slate-900 dark:text-white text-sm leading-tight">{{ tech.name }}</span>
           </div>
           <p class="text-slate-500 dark:text-slate-400 text-xs leading-[1.6]">{{ tech.desc }}</p>
         </div>
@@ -32,7 +32,8 @@
 </template>
 
 <script setup lang="ts">
-import { Grid3x3, FileCode2, Layers, Server, Database, Sparkles } from 'lucide-vue-next'
+import { DocumentTextIcon, Square2StackIcon, ServerIcon, CircleStackIcon, SparklesIcon } from '@heroicons/vue/20/solid'
+import { Cpu } from 'lucide-vue-next'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 
@@ -40,8 +41,8 @@ const { t } = useI18n()
 
 const technologies = computed(() => [
   {
-    name: 'PHP · Laravel · Livewire · AlpineJS',
-    icon: FileCode2,
+    name: 'Laravel -  Livewire -  Alpine.js',
+    icon: DocumentTextIcon,
     iconBg: 'bg-blue-50 dark:bg-blue-900/30',
     iconBorder: 'border-blue-100 dark:border-blue-800',
     accent: 'bg-blue-400',
@@ -50,7 +51,7 @@ const technologies = computed(() => [
   },
   {
     name: 'Vue.js',
-    icon: Layers,
+    icon: Square2StackIcon,
     iconBg: 'bg-emerald-50 dark:bg-emerald-900/30',
     iconBorder: 'border-emerald-100 dark:border-emerald-800',
     accent: 'bg-emerald-400',
@@ -58,8 +59,8 @@ const technologies = computed(() => [
     desc: t('technologies.vue_desc')
   },
   {
-    name: 'Linux · Ubuntu · POP!_OS',
-    icon: Server,
+    name: 'Linux',
+    icon: ServerIcon,
     iconBg: 'bg-orange-50 dark:bg-orange-900/30',
     iconBorder: 'border-orange-100 dark:border-orange-800',
     accent: 'bg-orange-400',
@@ -67,8 +68,8 @@ const technologies = computed(() => [
     desc: t('technologies.linux_desc')
   },
   {
-    name: 'MySQL · MongoDB · SQL Server',
-    icon: Database,
+    name: 'MySQL - MongoDB - SQL Server',
+    icon: CircleStackIcon,
     iconBg: 'bg-violet-50 dark:bg-violet-900/30',
     iconBorder: 'border-violet-100 dark:border-violet-800',
     accent: 'bg-violet-400',
@@ -76,8 +77,8 @@ const technologies = computed(() => [
     desc: t('technologies.db_desc')
   },
   {
-    name: 'AI Tools · Git · Docker',
-    icon: Sparkles,
+    name: 'AI Tools - Git - Docker',
+    icon: SparklesIcon,
     iconBg: 'bg-pink-50 dark:bg-pink-900/30',
     iconBorder: 'border-pink-100 dark:border-pink-800',
     accent: 'bg-pink-400',

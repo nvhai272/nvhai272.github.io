@@ -47,18 +47,22 @@
     "jobs": {
       "job1": {
         "role": "Web Developer",
-        "company": "Company (your company name)",
-        "desc": "Developed and maintained web applications for the Japanese market. Built new features and optimized system performance using Laravel, Livewire, Alpine.js, and Vue.js."
+        "company": "PARALINE VIETNAM",
+        "desc": "Developed and maintained web applications for the Japanese market. Built new features and optimized system performance."
       },
       "job2": {
-        "role": "Junior Web Developer",
-        "company": "Company (your company name)",
+        "role": "Web Developer",
+        "company": "BKCORP",
         "desc": "Contributed to basic web feature development, system maintenance, and supported the team on internal projects."
       }
     },
     "edu": {
-      "degree1": "Bachelor of Information Technology",
-      "school1": "University (your university name)"
+      "degree1": "",
+      "school1": "Hanoi University of Culture"
+    },
+    "edu2": {
+      "degree2": "",
+      "school2": "Aptech Hanoi"
     }
   },
   "contact": {
@@ -80,7 +84,6 @@
     }
   },
   "footer": {
-    "motto": "Building the web of tomorrow, one commit at a time.",
     "copyright": "© 2026 Portfolio. Built with Tailwind CSS and Love."
   }
 }

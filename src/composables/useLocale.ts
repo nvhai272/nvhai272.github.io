@@ -4,7 +4,7 @@ export function useLocale() {
   const { locale, t } = useI18n()
 
   const toggleLanguage = () => {
-    locale.value = locale.value === 'vi' ? 'en' : 'vi'
+    locale.value = locale.value === 'en' ? 'vi' : 'en'
     localStorage.setItem('locale', locale.value)
   }
 

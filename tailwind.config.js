@@ -60,8 +60,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Be Vietnam Pro', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Playfair Display', 'Georgia', 'serif'],
+        sans: ['Open Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Lato', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       borderRadius: {

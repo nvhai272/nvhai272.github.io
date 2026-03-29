@@ -1,22 +1,29 @@
 :root {
   /* Light — Warm Paper */
-  --background: oklch(0.981 0.005 80);           /* ivory ấm, không trắng lạnh */
-  --foreground: oklch(0.135 0.009 30);           /* mực ấm, không đen xám */
-  --card: oklch(1 0 0);                          /* trắng tinh — card nổi lên trên nền ivory */
+  --background: oklch(0.981 0.005 80);
+  /* ivory ấm, không trắng lạnh */
+  --foreground: oklch(0.135 0.009 30);
+  /* mực ấm, không đen xám */
+  --card: oklch(1 0 0);
+  /* trắng tinh — card nổi lên trên nền ivory */
   --card-foreground: oklch(0.135 0.009 30);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.135 0.009 30);
-  --primary: oklch(0.18 0.009 30);               /* gần đen, tông ấm */
+  --primary: oklch(0.18 0.009 30);
+  /* gần đen, tông ấm */
   --primary-foreground: oklch(0.981 0.005 80);
-  --secondary: oklch(0.955 0.006 80);            /* xám ấm nhạt */
+  --secondary: oklch(0.955 0.006 80);
+  /* xám ấm nhạt */
   --secondary-foreground: oklch(0.18 0.009 30);
   --muted: oklch(0.955 0.006 80);
-  --muted-foreground: oklch(0.495 0.011 30);     /* xám ấm trung tính */
+  --muted-foreground: oklch(0.495 0.011 30);
+  /* xám ấm trung tính */
   --accent: oklch(0.955 0.006 80);
   --accent-foreground: oklch(0.18 0.009 30);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.897 0.006 80);               /* viền ấm nhẹ */
+  --border: oklch(0.897 0.006 80);
+  /* viền ấm nhẹ */
   --input: oklch(0.897 0.006 80);
   --ring: oklch(0.695 0.008 80);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -37,23 +44,28 @@
 
 .dark {
   /* Dark — Cool Ink */
-  --background: oklch(0.127 0.007 248);          /* xanh-đen lạnh, sâu */
-  --foreground: oklch(0.965 0.003 80);           /* trắng ấm nhẹ — đối trọng với nền lạnh */
+  --background: oklch(0.127 0.007 248);
+  /* xanh-đen lạnh, sâu */
+  --foreground: oklch(0.965 0.003 80);
+  /* trắng ấm nhẹ — đối trọng với nền lạnh */
   --card: oklch(0.127 0.007 248);
   --card-foreground: oklch(0.965 0.003 80);
   --popover: oklch(0.127 0.007 248);
   --popover-foreground: oklch(0.965 0.003 80);
   --primary: oklch(0.965 0.003 80);
   --primary-foreground: oklch(0.18 0.009 30);
-  --secondary: oklch(0.205 0.007 248);           /* bề mặt nâng lên, xanh-xám lạnh */
+  --secondary: oklch(0.205 0.007 248);
+  /* bề mặt nâng lên, xanh-xám lạnh */
   --secondary-foreground: oklch(0.965 0.003 80);
   --muted: oklch(0.205 0.007 248);
-  --muted-foreground: oklch(0.638 0.006 248);    /* xám lạnh trung tính */
+  --muted-foreground: oklch(0.638 0.006 248);
+  /* xám lạnh trung tính */
   --accent: oklch(0.205 0.007 248);
   --accent-foreground: oklch(0.965 0.003 80);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.245 0.007 248);              /* viền lạnh tinh tế */
+  --border: oklch(0.245 0.007 248);
+  /* viền lạnh tinh tế */
   --input: oklch(0.245 0.007 248);
   --ring: oklch(0.388 0.007 248);
   --chart-1: oklch(0.488 0.243 264.376);
@@ -71,7 +83,9 @@
   --sidebar-ring: oklch(0.388 0.007 248);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -82,7 +96,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
   background-color: var(--background);
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
@@ -106,6 +120,7 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 .line-clamp-3 {
@@ -113,4 +128,9 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+a {
+  text-decoration: none !important;
 }

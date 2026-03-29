@@ -4,9 +4,9 @@
     <div class="relative p-[3px] rounded-xl avatar-ring">
       <div class="rounded-[10px] overflow-hidden bg-slate-100 dark:bg-[#141A27] relative group">
         <img
-          src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/556909038_4030981993790214_327275188755709228_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHrRayBxMXT1JtN1Guqq40YmEhBmHRk4-WYSEGYdGTj5RRVYR79e4A8JmXalsM5fCnaNjjznX3YyymHATWL9O-8&_nc_ohc=yVXEiG_nZr4Q7kNvwHACsDR&_nc_oc=AdkQYGIAfeIxYkVwfSthtcyQrdvtPDD1Y8-UGU_qUkRCA8LL1aDOhkcmzevuvAT3IQXcODXcERaLuACP8VNFF6ff&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=f0KYr2SvjqauB3U_iBoKLQ&_nc_ss=8&oh=00_AfwzpMQVDlr52a3JB_reAFjDvgj8IsWROYCcvC7QFEPtqw&oe=69B7755C"
+          src="/img.jpg"
           alt="Hai Nguyen"
-          class="w-full h-[260px] object-cover object-left-bottom transition-transform duration-500 group-hover:scale-[1.02]"
+          class="w-full h-auto md:h-[260px] md:object-cover md:object-left-bottom transition-transform duration-500 group-hover:scale-[1.02]"
         />
         <!-- Online indicator -->
         <div class="absolute bottom-3 right-3 bg-white dark:bg-[#141A27] rounded-full border border-slate-200 dark:border-[#232B3E] p-1.5 shadow-sm">
@@ -19,13 +19,13 @@
 
     <!-- Name & username -->
     <div class="mt-4 flex flex-col items-center">
-      <h1 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white leading-tight">Nguyen Van Hai</h1>
-      <p class="text-slate-400 dark:text-slate-500 text-xs font-mono tracking-wider mt-1">@nvhai272</p>
+      <h1 class="text-xl font-bold text-slate-700 dark:text-slate-200 truncate">Nguyen Van Hai</h1>
+      <p class="text-slate-400 font-bold dark:text-slate-500 text-sm font-mono tracking-wider mt-2">@nvhai272</p>
     </div>
 
     <!-- Job title -->
     <div class="mt-2 text-center">
-      <span class="inline-block text-xs font-display font-semibold tracking-wide text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-[#1C2234] border border-slate-200 dark:border-[#232B3E] px-3 py-1 rounded-full">
+      <span class="text-sm font-bold tracking-wide text-slate-600 dark:text-slate-300">
         {{ $t('sidebar.job_title') }}
       </span>
     </div>
@@ -33,9 +33,9 @@
     <!-- View history button -->
     <button
       @click="$emit('view-history')"
-      class="mt-4 w-full py-2 px-4 rounded-lg border border-slate-200 dark:border-[#232B3E] bg-slate-50 dark:bg-[#1C2234] text-slate-700 dark:text-slate-200 font-semibold text-sm hover:bg-slate-100 dark:hover:bg-[#232B3E] hover:border-slate-300 dark:hover:border-[#58a6ff]/50 transition-all active:scale-[0.98]"
+      class="mt-4 flex items-center justify-center gap-1.5 w-full py-2 px-4 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#f472b6] text-white text-sm font-bold hover:opacity-90 transition-all hover:shadow-md hover:shadow-[#f472b6]/20 active:scale-[0.98]"
     >
-      {{ $t('sidebar.view_history') }}
+      View CV
     </button>
 
     <!-- Profile items -->
@@ -43,15 +43,15 @@
       <div
         v-for="item in profileItems"
         :key="item.id"
-        class="flex items-center gap-2.5 text-slate-500 dark:text-slate-400"
+        class="flex items-center gap-2.5 text-slate-700 dark:text-slate-200"
       >
-        <component :is="item.icon" class="w-4 h-4 shrink-0 text-slate-400 dark:text-slate-500" />
+        <component :is="item.icon" class="w-5 h-5 shrink-0 text-slate-600 dark:text-slate-300" />
         <component
           :is="item.link ? 'a' : 'span'"
           :href="item.link"
           :class="item.link
-            ? 'text-sm text-slate-600 dark:text-slate-300 hover:text-[#EC5B13] transition-colors truncate'
-            : 'text-sm text-slate-600 dark:text-slate-300 truncate'"
+            ? 'text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-sky-500 transition-colors truncate'
+            : 'text-sm font-medium text-slate-700 dark:text-slate-200 truncate'"
         >
           {{ item.text }}
         </component>
@@ -61,8 +61,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed } from 'vue'
-import { PenLine, MapPin, Clock, Mail } from 'lucide-vue-next'
+import { computed } from 'vue'
+import { Feather, Navigation, AtSign } from 'lucide-vue-next'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -75,63 +75,35 @@ defineEmits<{
   'view-history': []
 }>()
 
-const time = ref('')
-let interval: number | undefined
-
-const updateTime = () => {
-  time.value = new Date().toLocaleTimeString('vi-VN', {
-    timeZone: 'Asia/Ho_Chi_Minh',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false
-  })
-}
-
 const profileItems = computed(() => [
   {
     id: 'bio',
-    icon: PenLine,
+    icon: Feather,
     text: t('sidebar.bio_decide')
   },
   {
     id: 'location',
-    icon: MapPin,
+    icon: Navigation,
     text: t('sidebar.location')
   },
   {
-    id: 'time',
-    icon: Clock,
-    text: `${time.value} (UTC+07:00)`
-  },
-  {
     id: 'email',
-    icon: Mail,
+    icon: AtSign,
     text: 'nvhai272@gmail.com',
     link: 'mailto:nvhai272@gmail.com'
   }
 ])
-
-onMounted(() => {
-  updateTime()
-  interval = setInterval(updateTime, 1000)
-})
-
-onUnmounted(() => clearInterval(interval))
 </script>
 
 <style scoped>
 .avatar-ring {
   background: conic-gradient(
     from 0deg,
-    #EC5B13,
-    #f97316,
-    #fb923c,
-    #f472b6,
-    #a78bfa,
     #38bdf8,
-    #34d399,
-    #EC5B13
+    #818cf8,
+    #f472b6,
+    #818cf8,
+    #38bdf8
   );
   animation: spin-ring 4s linear infinite;
 }
