@@ -55,7 +55,7 @@
         >
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
-              <label class="font-display text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-[0.15em]">
+              <label class="text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wide">
                 {{ $t('contact.form.name') }} <span class="text-red-400">*</span>
               </label>
               <input
@@ -67,7 +67,7 @@
               <span v-if="errors.name" class="text-red-400 text-xs">{{ errors.name }}</span>
             </div>
             <div class="flex flex-col gap-1.5">
-              <label class="font-display text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-[0.15em]">
+              <label class="text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wide">
                 {{ $t('contact.form.email') }} <span class="text-red-400">*</span>
               </label>
               <input
