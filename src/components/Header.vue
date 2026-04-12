@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#FAFAF7]/90 dark:bg-[#0F1219]/90 border-b border-slate-200 dark:border-[#232B3E] transition-colors">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-background/90 border-b border-border transition-colors">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 h-14 flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center gap-2.5 group cursor-pointer select-none">
@@ -16,21 +16,20 @@
 
       <!-- Actions -->
       <div class="flex items-center gap-0.5">
-        <!-- @click="toggleLanguage" -->
         <button
-          @click=""
-          class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-[#232B3E] text-slate-500 dark:text-slate-400 hover:border-slate-300 dark:hover:border-[#58a6ff] hover:bg-slate-100 dark:hover:bg-[#1C2234] hover:text-slate-700 dark:hover:text-slate-200 transition-all shadow-sm text-xs font-bold"
+          @click="toggleLanguage"
+          class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-border text-muted-foreground hover:border-[#38bdf8]/50 hover:bg-secondary hover:text-foreground transition-all shadow-sm text-xs font-bold"
           :title="`${$t('header.language')}: ${currentLocale.toUpperCase()}`"
         >
           <LanguageIcon class="size-4" />
           <span class="hidden sm:inline">{{ currentLocale.toUpperCase() }}</span>
         </button>
 
-        <div class="w-px h-4 bg-slate-200 dark:bg-[#232B3E] mx-1" />
+        <div class="w-px h-4 bg-border mx-1" />
 
         <button
           @click="$emit('toggle')"
-          class="p-2 rounded-lg border border-slate-200 dark:border-[#232B3E] text-slate-500 dark:text-slate-400 hover:border-slate-300 dark:hover:border-[#58a6ff] hover:bg-slate-100 dark:hover:bg-[#1C2234] hover:text-slate-700 dark:hover:text-slate-200 transition-all shadow-sm"
+          class="p-2 rounded-lg border border-border text-muted-foreground hover:border-[#38bdf8]/50 hover:bg-secondary hover:text-foreground transition-all shadow-sm"
           :aria-label="$t('header.theme')"
         >
           <SunIcon v-if="dark" class="size-4" />
@@ -43,7 +42,7 @@
             'md:hidden p-2 rounded-lg border transition-all shadow-sm',
             menuOpen
               ? 'border-[#38bdf8] bg-[#38bdf8]/10 text-[#38bdf8]'
-              : 'border-slate-200 dark:border-[#232B3E] text-slate-500 dark:text-slate-400 hover:border-slate-300 dark:hover:border-[#58a6ff] hover:bg-slate-100 dark:hover:bg-[#1C2234]'
+              : 'border-border text-muted-foreground hover:border-[#38bdf8]/50 hover:bg-secondary'
           ]"
           :aria-label="$t('header.menu')"
         >
@@ -73,11 +72,11 @@ const { locale } = useI18n()
 
 const currentLocale = computed(() => locale.value)
 
-// const toggleLanguage = () => {
-//   const newLocale = locale.value === 'vi' ? 'en' : 'vi'
-//   locale.value = newLocale
-//   localStorage.setItem('locale', newLocale)
-// }
+const toggleLanguage = () => {
+  const newLocale = locale.value === 'vi' ? 'en' : 'vi'
+  locale.value = newLocale
+  localStorage.setItem('locale', newLocale)
+}
 </script>
 
 <style scoped>

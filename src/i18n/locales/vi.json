@@ -17,7 +17,6 @@
     "location": "Hà Nội, Việt Nam",
     "the_story": {
       "name": "Xin chào thế giới!",
-      "p1": "Đây là nơi tôi giới thiệu bản thân và chia sẻ thông tin liên hệ.",
       "p2": "Tôi là một web developer hiện đang tập trung vào việc phát triển và bảo trì các ứng dụng web, chủ yếu phục vụ khách hàng tại thị trường Nhật Bản.",
       "p3": "Tôi luôn sẵn sàng trao đổi, chia sẻ kiến thức và đón nhận những cơ hội mới. Nếu bạn muốn kết nối, đừng ngần ngại liên hệ với tôi.",
       "p4": "Cảm ơn bạn đã ghé thăm..."
@@ -47,18 +46,22 @@
     "jobs": {
       "job1": {
         "role": "Web Developer",
-        "company": "Công ty (tên công ty của bạn)",
+        "company": "PARALINE VIETNAM",
         "desc": "Phát triển và bảo trì các ứng dụng web phục vụ thị trường Nhật Bản. Làm việc với Laravel, Livewire, Alpine.js và Vue.js để xây dựng các tính năng mới và tối ưu hóa hiệu suất hệ thống."
       },
       "job2": {
-        "role": "Junior Web Developer",
-        "company": "Công ty (tên công ty của bạn)",
+        "role": "Web Developer",
+        "company": "BKCORP",
         "desc": "Tham gia phát triển các tính năng web cơ bản, bảo trì hệ thống và hỗ trợ team trong các dự án nội bộ."
       }
     },
     "edu": {
-      "degree1": "Kỹ sư Công nghệ Thông tin",
-      "school1": "Trường Đại học (tên trường của bạn)"
+      "degree1": "",
+      "school1": "Hanoi University of Culture"
+    },
+    "edu2": {
+      "degree2": "",
+      "school2": "Aptech Hanoi"
     }
   },
   "contact": {
@@ -76,11 +79,16 @@
       "send": "Gửi tin nhắn",
       "sending": "Đang gửi...",
       "success": "Tin nhắn đã được gửi thành công! Tôi sẽ phản hồi sớm.",
-      "error": "Gửi thất bại. Vui lòng thử lại hoặc liên hệ trực tiếp qua email."
+      "error": "Gửi thất bại. Vui lòng thử lại hoặc liên hệ trực tiếp qua email.",
+      "validation": {
+        "name_required": "Vui lòng nhập họ tên",
+        "email_required": "Vui lòng nhập email",
+        "email_invalid": "Địa chỉ email không hợp lệ",
+        "message_required": "Vui lòng nhập nội dung"
+      }
     }
   },
   "footer": {
-    "motto": "Xây dựng trang web của ngày mai, mỗi lần commit một bước.",
-    "copyright": "© 2026 Portfolio. Được xây dựng với Tailwind CSS và Tình yêu."
+    "copyright": "© 2026 - Được xây dựng với Vue và Tailwind CSS"
   }
 }

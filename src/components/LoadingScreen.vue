@@ -20,8 +20,8 @@ import { ref, onMounted } from 'vue'
 defineEmits<{ done: [] }>()
 
 const TEXT = 'CODE FOR LIFE'
-const TYPE_SPEED = 90   // ms mỗi ký tự
-const FADE_DELAY = 3000 // tổng thời gian trước khi fade out
+const TYPE_SPEED = 90
+const FADE_DELAY = 3000
 
 const displayed = ref('')
 const dots = ref('')
@@ -29,14 +29,12 @@ const visible = ref(true)
 const progress = ref(0)
 
 onMounted(() => {
-  // Typewriter
   let i = 0
   const type = () => {
     if (i < TEXT.length) {
       displayed.value += TEXT[i++]
       setTimeout(type, TYPE_SPEED)
     } else {
-      // Xuất hiện từng chấm: . → .. → ...
       let d = 0
       const addDot = () => {
         if (d < 3) {
@@ -50,7 +48,6 @@ onMounted(() => {
   }
   type()
 
-  // Progress bar chạy trong FADE_DELAY ms
   const start = performance.now()
   const tick = (now: number) => {
     progress.value = Math.min(100, ((now - start) / FADE_DELAY) * 100)
@@ -58,7 +55,6 @@ onMounted(() => {
   }
   requestAnimationFrame(tick)
 
-  // Ẩn sau FADE_DELAY
   setTimeout(() => {
     visible.value = false
   }, FADE_DELAY)
@@ -100,21 +96,6 @@ onMounted(() => {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.cursor {
-  color: #38bdf8;
-  font-weight: 300;
-  animation: cursor-on 0.1s step-end forwards;
-}
-
-.cursor.blink {
-  animation: blink 0.8s step-end infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
 }
 
 .loading-gif {

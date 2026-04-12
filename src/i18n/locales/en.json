@@ -17,7 +17,6 @@
     "location": "Ha Noi, Viet Nam",
     "the_story": {
       "name": "Hello World!",
-      "p1": "This is where I introduce myself and share my contact information.",
       "p2": "I am a web developer currently focused on building and maintaining web applications, primarily serving clients in the Japanese market.",
       "p3": "I am always open to meaningful conversations, knowledge sharing, and new opportunities. If you'd like to connect, don't hesitate to reach out.",
       "p4": "Thank you for visiting..."
@@ -80,10 +79,16 @@
       "send": "Send Message",
       "sending": "Sending...",
       "success": "Message sent successfully! I'll reply soon.",
-      "error": "Failed to send. Please try again or contact me directly via email."
+      "error": "Failed to send. Please try again or contact me directly via email.",
+      "validation": {
+        "name_required": "Name is required",
+        "email_required": "Email is required",
+        "email_invalid": "Invalid email address",
+        "message_required": "Message is required"
+      }
     }
   },
   "footer": {
-    "copyright": "© 2026 Portfolio. Built with Tailwind CSS and Love."
+    "copyright": "© 2026 - Built with Vue and Tailwind CSS"
   }
 }

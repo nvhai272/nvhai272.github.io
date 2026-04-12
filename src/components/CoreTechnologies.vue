@@ -1,30 +1,32 @@
 <template>
-  <section>
-    <div class="flex items-center gap-2 mb-5">
-      <div class="size-7 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
-        <Cpu class="size-4 text-green-500" />
+  <section class="w-full">
+    <div class="flex items-center gap-3">
+      <div class="size-10 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 shadow-sm">
+        <Cpu class="size-5 text-emerald-500" />
       </div>
-      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-green-500">{{ $t('technologies.title') }}</h2>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-foreground">{{ $t('technologies.title') }}</h2>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      <div
-        v-for="tech in technologies"
-        :key="tech.name"
-        :class="['group relative bg-white dark:bg-[#141A27] rounded-xl border border-slate-200 dark:border-[#232B3E] p-4 flex gap-3 items-start transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-black/40 overflow-hidden cursor-default tech-card', tech.glow]"
-      >
-        <!-- Left accent bar on hover -->
-        <div :class="['absolute left-0 top-0 bottom-0 w-0.5 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100', tech.accent]" />
+    <div class="relative flex overflow-hidden group py-4">
+      <div class="absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-background via-background/50 to-transparent pointer-events-none"></div>
+      <div class="absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-background via-background/50 to-transparent pointer-events-none"></div>
 
-        <div :class="['icon-container size-11 rounded-xl flex items-center justify-center shrink-0 border', tech.iconBg, tech.iconBorder]">
-          <component :is="tech.icon" class="size-5" />
-        </div>
-
-        <div class="flex-1 min-w-0">
-          <div class="flex items-center gap-2 mb-1">
-            <span class="font-semibold tracking-tight text-slate-900 dark:text-white text-sm leading-tight">{{ tech.name }}</span>
+      <div class="flex animate-marquee-slow gap-6 group-hover:[animation-play-state:paused] py-2">
+        <div
+            v-for="(tech, index) in [...technologies, ...technologies]"
+            :key="index"
+            class="flex shrink-0 items-center gap-4 px-6 py-4 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-110 hover:border-emerald-500/30 hover:bg-card hover:shadow-xl group/item"
+        >
+          <div :class="['size-12 rounded-xl flex items-center justify-center shrink-0 p-2.5 transition-all duration-500 group-hover/item:rotate-3', tech.bgClass]">
+            <VIcon :name="tech.icon" class="size-full" />
           </div>
-          <p class="text-slate-500 dark:text-slate-400 text-xs leading-[1.6]">{{ tech.desc }}</p>
+
+          <div class="flex flex-col">
+            <span class="text-foreground text-sm font-bold tracking-tight">{{ tech.name }}</span>
+            <span class="text-[11px] text-muted-foreground/80 font-medium">{{ tech.sub }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -32,79 +34,101 @@
 </template>
 
 <script setup lang="ts">
-import { DocumentTextIcon, Square2StackIcon, ServerIcon, CircleStackIcon, SparklesIcon } from '@heroicons/vue/20/solid'
 import { Cpu } from 'lucide-vue-next'
-import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 
-const { t } = useI18n()
+// Import thư viện oh-vue-icons
+import { OhVueIcon as VIcon, addIcons } from "oh-vue-icons";
+import {
+  SiLaravel,
+  SiLivewire,
+  SiAlpinedotjs, // Đã sửa từ SiAlpinejs
+  SiVuedotjs,    // Đã sửa từ SiVuejs
+  SiLinux,
+  SiMysql,
+  SiMongodb,
+  SiMicrosoftsqlserver,
+  SiDocker,
+  SiGit,
+  SiOpenai
+} from "oh-vue-icons/icons";
+
+// Đăng ký các logo
+addIcons(
+    SiLaravel, SiLivewire, SiAlpinedotjs, SiVuedotjs,
+    SiLinux, SiMysql, SiMongodb, SiMicrosoftsqlserver,
+    SiDocker, SiGit, SiOpenai
+);
 
 const technologies = computed(() => [
   {
-    name: 'Laravel -  Livewire -  Alpine.js',
-    icon: DocumentTextIcon,
-    iconBg: 'bg-blue-50 dark:bg-blue-900/30',
-    iconBorder: 'border-blue-100 dark:border-blue-800',
-    accent: 'bg-blue-400',
-    glow: 'hover-glow-blue',
-    desc: t('technologies.php_desc')
+    name: 'Laravel',
+    sub: 'Backend Framework',
+    icon: SiLaravel.name,
+    bgClass: 'bg-[#FF2D20]/10 text-[#FF2D20] border-[#FF2D20]/20'
+  },
+  {
+    name: 'Livewire',
+    sub: '',
+    icon: SiLivewire.name,
+    bgClass: 'bg-[#FB70A9]/10 text-[#FB70A9] border-[#FB70A9]/20'
+  },
+  {
+    name: 'Alpine.js',
+    sub: '',
+    icon: SiAlpinedotjs.name,
+    bgClass: 'bg-[#8BC0D0]/10 text-[#8BC0D0] border-[#8BC0D0]/20'
   },
   {
     name: 'Vue.js',
-    icon: Square2StackIcon,
-    iconBg: 'bg-emerald-50 dark:bg-emerald-900/30',
-    iconBorder: 'border-emerald-100 dark:border-emerald-800',
-    accent: 'bg-emerald-400',
-    glow: 'hover-glow-emerald',
-    desc: t('technologies.vue_desc')
+    sub: 'Frontend Framework',
+    icon: SiVuedotjs.name,
+    bgClass: 'bg-[#41B883]/10 text-[#41B883] border-[#41B883]/20'
+  },
+  {
+    name: 'Database',
+    sub: 'MySQL + SQL Server + MongoDB',
+    icon: SiMysql.name,
+    bgClass: 'bg-[#4479A1]/10 text-[#4479A1] border-[#4479A1]/20'
+  },
+  {
+    name: 'Docker',
+    sub: 'Basic',
+    icon: SiDocker.name,
+    bgClass: 'bg-[#2496ED]/10 text-[#2496ED] border-[#2496ED]/20'
+  },
+  {
+    name: 'AI Integration',
+    sub: 'Basic',
+    icon: SiOpenai.name,
+    bgClass: 'bg-[#10a37f]/10 text-[#10a37f] border-[#10a37f]/20'
   },
   {
     name: 'Linux',
-    icon: ServerIcon,
-    iconBg: 'bg-orange-50 dark:bg-orange-900/30',
-    iconBorder: 'border-orange-100 dark:border-orange-800',
-    accent: 'bg-orange-400',
-    glow: 'hover-glow-orange',
-    desc: t('technologies.linux_desc')
+    sub: 'System Admin',
+    icon: SiLinux.name,
+    bgClass: 'bg-[#FCC624]/10 text-[#71717a] dark:text-[#FCC624] border-[#FCC624]/20' // Màu vàng Tux
   },
-  {
-    name: 'MySQL - MongoDB - SQL Server',
-    icon: CircleStackIcon,
-    iconBg: 'bg-violet-50 dark:bg-violet-900/30',
-    iconBorder: 'border-violet-100 dark:border-violet-800',
-    accent: 'bg-violet-400',
-    glow: 'hover-glow-violet',
-    desc: t('technologies.db_desc')
-  },
-  {
-    name: 'AI Tools - Git - Docker',
-    icon: SparklesIcon,
-    iconBg: 'bg-pink-50 dark:bg-pink-900/30',
-    iconBorder: 'border-pink-100 dark:border-pink-800',
-    accent: 'bg-pink-400',
-    glow: 'hover-glow-pink',
-    desc: t('technologies.other_desc')
-  }
 ])
 </script>
 
 <style scoped>
-/* Neon glow per technology color */
-.hover-glow-blue:hover    { border-color: rgb(96 165 250 / 0.5);  box-shadow: 0 0 18px rgb(59 130 246 / 0.15),  0 4px 20px rgb(0 0 0 / 0.08); }
-.hover-glow-emerald:hover { border-color: rgb(52 211 153 / 0.5);  box-shadow: 0 0 18px rgb(16 185 129 / 0.15), 0 4px 20px rgb(0 0 0 / 0.08); }
-.hover-glow-orange:hover  { border-color: rgb(251 146 60  / 0.5); box-shadow: 0 0 18px rgb(249 115 22 / 0.15),  0 4px 20px rgb(0 0 0 / 0.08); }
-.hover-glow-violet:hover  { border-color: rgb(167 139 250 / 0.5); box-shadow: 0 0 18px rgb(139 92 246 / 0.15),  0 4px 20px rgb(0 0 0 / 0.08); }
-.hover-glow-pink:hover    { border-color: rgb(244 114 182 / 0.5); box-shadow: 0 0 18px rgb(236 72 153 / 0.15),  0 4px 20px rgb(0 0 0 / 0.08); }
-
-/* Icon bounce on card hover */
-.tech-card:hover .icon-bounce {
-  animation: icon-pop 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  /* 45s tạo cảm giác lướt chậm rãi, sang trọng */
+  animation: marquee 45s linear infinite;
 }
-@keyframes icon-pop {
-  0%   { transform: scale(1)    rotate(0deg);   }
-  30%  { transform: scale(1.2)  rotate(-8deg);  }
-  60%  { transform: scale(1.15) rotate(6deg);   }
-  80%  { transform: scale(1.1)  rotate(-3deg);  }
-  100% { transform: scale(1.1)  rotate(0deg);   }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Đảm bảo hiệu ứng mượt trên thiết bị di động */
+@media (max-width: 640px) {
+  .animate-marquee-slow {
+    animation-duration: 30s;
+  }
 }
 </style>
