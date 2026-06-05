@@ -1,52 +1,40 @@
 <template>
   <header class="sticky top-0 z-50 backdrop-blur-md bg-background/90 border-b border-border transition-colors">
-    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 h-14 flex items-center justify-between">
+    <div class="max-w-[720px] mx-auto px-4 sm:px-6 h-14 flex items-center gap-6">
       <!-- Logo -->
-      <div class="flex items-center gap-2.5 group cursor-pointer select-none">
-        <div class="relative size-8 rounded-xl bg-gradient-to-br from-[#38bdf8] to-[#f472b6] flex items-center justify-center shadow-sm shadow-[#38bdf8]/30 group-hover:shadow-[#f472b6]/40 group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
-          <CodeBracketIcon class="size-4 text-white" />
+      <div class="flex items-center gap-2 cursor-pointer select-none shrink-0">
+        <div class="size-7 rounded-lg bg-foreground/10 flex items-center justify-center">
+          <CodeBracketIcon class="size-4 text-foreground" />
         </div>
-        <div class="flex items-baseline gap-px">
-          <span class="font-bold text-xl sm:text-2xl bg-gradient-to-r from-[#38bdf8] via-[#818cf8] to-[#f472b6] bg-clip-text text-transparent leading-none">
-            Code For Life
-          </span>
-          <span class="text-[#f472b6] font-bold text-xl sm:text-2xl leading-none cursor-blink">_</span>
-        </div>
+        <span class="font-bold text-sm text-foreground">Code For Life<span class="text-muted-foreground cursor-blink">_</span></span>
       </div>
 
+      <!-- Nav links -->
+      <nav class="hidden md:flex items-center gap-5 flex-1">
+        <a v-for="item in navItems" :key="item.href" :href="item.href"
+           class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          {{ item.label }}
+        </a>
+      </nav>
+
       <!-- Actions -->
-      <div class="flex items-center gap-0.5">
+      <div class="flex items-center gap-2 ml-auto shrink-0">
         <button
           @click="toggleLanguage"
-          class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-border text-muted-foreground hover:border-[#38bdf8]/50 hover:bg-secondary hover:text-foreground transition-all shadow-sm text-xs font-bold"
+          class="flex items-center gap-1 px-2.5 py-1 rounded border border-border text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors text-xs font-mono"
           :title="`${$t('header.language')}: ${currentLocale.toUpperCase()}`"
         >
-          <LanguageIcon class="size-4" />
+          <LanguageIcon class="size-3.5" />
           <span class="hidden sm:inline">{{ currentLocale.toUpperCase() }}</span>
         </button>
 
-        <div class="w-px h-4 bg-border mx-1" />
-
         <button
           @click="$emit('toggle')"
-          class="p-2 rounded-lg border border-border text-muted-foreground hover:border-[#38bdf8]/50 hover:bg-secondary hover:text-foreground transition-all shadow-sm"
+          class="p-1.5 rounded border border-border text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
           :aria-label="$t('header.theme')"
         >
           <SunIcon v-if="dark" class="size-4" />
           <MoonIcon v-else class="size-4" />
-        </button>
-
-        <button
-          @click="$emit('menu-toggle')"
-          :class="[
-            'md:hidden p-2 rounded-lg border transition-all shadow-sm',
-            menuOpen
-              ? 'border-[#38bdf8] bg-[#38bdf8]/10 text-[#38bdf8]'
-              : 'border-border text-muted-foreground hover:border-[#38bdf8]/50 hover:bg-secondary'
-          ]"
-          :aria-label="$t('header.menu')"
-        >
-          <Bars3Icon class="size-4" />
         </button>
       </div>
     </div>
@@ -55,22 +43,27 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { CodeBracketIcon, LanguageIcon, SunIcon, MoonIcon, Bars3Icon } from '@heroicons/vue/20/solid'
+import { CodeBracketIcon, LanguageIcon, SunIcon, MoonIcon } from '@heroicons/vue/20/solid'
 import { useI18n } from 'vue-i18n'
 
 defineProps<{
   dark: boolean
-  menuOpen: boolean
 }>()
 
 defineEmits<{
   toggle: []
-  'menu-toggle': []
 }>()
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
 const currentLocale = computed(() => locale.value)
+
+const navItems = computed(() => [
+  { href: '#hero',         label: t('nav.about') },
+  { href: '#technologies', label: t('nav.skills') },
+  { href: '#repos',        label: t('nav.projects') },
+  { href: '#contact',      label: t('nav.contact') },
+])
 
 const toggleLanguage = () => {
   const newLocale = locale.value === 'vi' ? 'en' : 'vi'

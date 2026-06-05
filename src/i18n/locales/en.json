@@ -5,19 +5,26 @@
     "theme": "Toggle theme",
     "menu": "Menu"
   },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
   "tabs": {
     "overview": "Overview",
-    "experience": "Experience",
     "contact": "Contact"
   },
   "sidebar": {
     "job_title": "Web Developer",
     "view_history": "View History",
+    "download_cv": "Download CV",
+    "view_cv": "View CV",
     "bio_decide": "1 brain, 2 hands, 3 seconds to decide",
     "location": "Ha Noi, Viet Nam",
     "the_story": {
       "name": "Hello World!",
-      "p2": "I am a web developer currently focused on building and maintaining web applications, primarily serving clients in the Japanese market.",
+      "p2": "I am a web developer currently focused on building and maintaining web applications.",
       "p3": "I am always open to meaningful conversations, knowledge sharing, and new opportunities. If you'd like to connect, don't hesitate to reach out.",
       "p4": "Thank you for visiting..."
     }
@@ -36,33 +43,6 @@
     "error": "Failed to load repositories. Please try again.",
     "retry": "Retry",
     "view_all": "View all on GitHub"
-  },
-  "experience": {
-    "title": "Experience",
-    "download_cv": "Download CV",
-    "present": "Present",
-    "work": "Work Experience",
-    "education": "Education",
-    "jobs": {
-      "job1": {
-        "role": "Web Developer",
-        "company": "PARALINE VIETNAM",
-        "desc": "Developed and maintained web applications for the Japanese market. Built new features and optimized system performance."
-      },
-      "job2": {
-        "role": "Web Developer",
-        "company": "BKCORP",
-        "desc": "Contributed to basic web feature development, system maintenance, and supported the team on internal projects."
-      }
-    },
-    "edu": {
-      "degree1": "",
-      "school1": "Hanoi University of Culture"
-    },
-    "edu2": {
-      "degree2": "",
-      "school2": "Aptech Hanoi"
-    }
   },
   "contact": {
     "title": "Contact",

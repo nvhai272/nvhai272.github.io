@@ -24,10 +24,10 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { Squares2X2Icon, BriefcaseIcon, EnvelopeIcon } from '@heroicons/vue/20/solid'
+import { Squares2X2Icon, EnvelopeIcon } from '@heroicons/vue/20/solid'
 import { useI18n } from 'vue-i18n'
 
-type Tab = 'overview' | 'experience' | 'contact'
+type Tab = 'overview' | 'contact'
 
 defineProps<{
   active: Tab
@@ -41,7 +41,6 @@ const { t } = useI18n()
 
 const tabs = computed(() => [
   { id: 'overview' as Tab, label: t('tabs.overview'), icon: Squares2X2Icon },
-  { id: 'experience' as Tab, label: t('tabs.experience'), icon: BriefcaseIcon },
   { id: 'contact' as Tab, label: t('tabs.contact'), icon: EnvelopeIcon }
 ])
 </script>

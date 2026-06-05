@@ -5,19 +5,26 @@
     "theme": "Chuyển đổi chủ đề",
     "menu": "Menu"
   },
+  "nav": {
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "contact": "Liên hệ"
+  },
   "tabs": {
     "overview": "Tổng quan",
-    "experience": "Kinh nghiệm",
     "contact": "Liên hệ"
   },
   "sidebar": {
     "job_title": "Nhà phát triển Web",
     "view_history": "Xem lịch sử",
+    "download_cv": "Tải CV",
+    "view_cv": "Xem CV",
     "bio_decide": "1 bộ não, 2 bàn tay, 3 giây để quyết định",
     "location": "Hà Nội, Việt Nam",
     "the_story": {
-      "name": "Xin chào thế giới!",
-      "p2": "Tôi là một web developer hiện đang tập trung vào việc phát triển và bảo trì các ứng dụng web, chủ yếu phục vụ khách hàng tại thị trường Nhật Bản.",
+      "name": "Xin chào thế giới",
+      "p2": "Tôi là một web developer hiện đang tập trung vào việc phát triển và bảo trì các ứng dụng web.",
       "p3": "Tôi luôn sẵn sàng trao đổi, chia sẻ kiến thức và đón nhận những cơ hội mới. Nếu bạn muốn kết nối, đừng ngần ngại liên hệ với tôi.",
       "p4": "Cảm ơn bạn đã ghé thăm..."
     }
@@ -36,33 +43,6 @@
     "error": "Không thể tải repositories. Vui lòng thử lại.",
     "retry": "Thử lại",
     "view_all": "Xem tất cả trên GitHub"
-  },
-  "experience": {
-    "title": "Kinh nghiệm",
-    "download_cv": "Tải CV",
-    "present": "Hiện tại",
-    "work": "Kinh nghiệm làm việc",
-    "education": "Học vấn",
-    "jobs": {
-      "job1": {
-        "role": "Web Developer",
-        "company": "PARALINE VIETNAM",
-        "desc": "Phát triển và bảo trì các ứng dụng web phục vụ thị trường Nhật Bản. Làm việc với Laravel, Livewire, Alpine.js và Vue.js để xây dựng các tính năng mới và tối ưu hóa hiệu suất hệ thống."
-      },
-      "job2": {
-        "role": "Web Developer",
-        "company": "BKCORP",
-        "desc": "Tham gia phát triển các tính năng web cơ bản, bảo trì hệ thống và hỗ trợ team trong các dự án nội bộ."
-      }
-    },
-    "edu": {
-      "degree1": "",
-      "school1": "Hanoi University of Culture"
-    },
-    "edu2": {
-      "degree2": "",
-      "school2": "Aptech Hanoi"
-    }
   },
   "contact": {
     "title": "Liên hệ",
