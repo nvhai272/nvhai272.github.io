@@ -2,26 +2,26 @@
   <Teleport to="body">
     <Transition name="modal">
       <div v-if="open" class="fixed inset-0 z-50 flex items-center justify-center p-4" @click.self="$emit('close')">
-        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" @click="$emit('close')" />
+        <div class="absolute inset-0 bg-foreground/30 backdrop-blur-sm" @click="$emit('close')" />
 
-        <div class="relative w-full max-w-4xl h-[90vh] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <div class="relative w-full max-w-4xl h-[90vh] bg-card border-2 border-border shadow-[8px_8px_0_0_var(--border)] flex flex-col overflow-hidden">
           <!-- Header -->
-          <div class="flex items-center justify-between px-5 py-3 border-b border-border shrink-0">
-            <h3 class="text-sm font-bold text-foreground uppercase tracking-wider">{{ $t('sidebar.view_cv') }}</h3>
+          <div class="flex items-center justify-between px-5 h-12 border-b-2 border-border shrink-0">
+            <h3 class="font-display font-bold text-sm text-foreground uppercase tracking-tight">{{ $t('sidebar.view_cv') }}</h3>
             <div class="flex items-center gap-2">
               <a
                 href="/cv.pdf"
                 download
-                class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#f472b6] text-white text-xs font-bold hover:opacity-90 transition-all active:scale-[0.98]"
+                class="btn-accent flex items-center gap-1.5 px-3 h-8 font-mono text-[11px] font-bold uppercase tracking-wider"
               >
                 <DocumentArrowDownIcon class="size-3.5 shrink-0" />
                 {{ $t('sidebar.download_cv') }}
               </a>
               <button
                 @click="$emit('close')"
-                class="size-7 flex items-center justify-center rounded-lg hover:bg-secondary transition-colors"
+                class="btn-brut size-8 flex items-center justify-center"
               >
-                <XMarkIcon class="size-4 text-muted-foreground" />
+                <XMarkIcon class="size-4" />
               </button>
             </div>
           </div>

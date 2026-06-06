@@ -7,9 +7,27 @@
   },
   "nav": {
     "about": "Giới thiệu",
-    "skills": "Kỹ năng",
+    "stack": "Công nghệ",
     "projects": "Dự án",
     "contact": "Liên hệ"
+  },
+  "hero": {
+    "kicker": "Web Developer · Portfolio",
+    "summary": "Tôi xây dựng và bảo trì các ứng dụng web hiện đại — biến ý tưởng thành giao diện nhanh, ổn định và dễ bảo trì.",
+    "available": "Sẵn sàng nhận việc",
+    "cta_contact": "Liên hệ ngay"
+  },
+  "sections": {
+    "about":   { "title": "Giới thiệu", "meta": "Tôi là ai" },
+    "stack":   { "title": "Công nghệ",  "meta": "Công cụ tôi dùng" },
+    "work":    { "title": "Dự án",      "meta": "Repository tiêu biểu" },
+    "contact": { "title": "Liên hệ",    "meta": "Chào nhé" }
+  },
+  "about": {
+    "role_label": "Vai trò",
+    "based_label": "Tại",
+    "focus_label": "Tập trung",
+    "focus_value": "Ứng dụng web"
   },
   "tabs": {
     "overview": "Tổng quan",
@@ -20,17 +38,19 @@
     "view_history": "Xem lịch sử",
     "download_cv": "Tải CV",
     "view_cv": "Xem CV",
-    "bio_decide": "1 bộ não, 2 bàn tay, 3 giây để quyết định",
+    "bio_decide": "1 bộ não, 2 bàn tay, 3 giây để quyết định.",
     "location": "Hà Nội, Việt Nam",
     "the_story": {
       "name": "Xin chào thế giới",
       "p2": "Tôi là một web developer hiện đang tập trung vào việc phát triển và bảo trì các ứng dụng web.",
+      "ai_note": "Với sự phát triển và hỗ trợ của AI, tôi tự tin có thể đáp ứng công việc với nhiều công nghệ khác nhau.",
       "p3": "Tôi luôn sẵn sàng trao đổi, chia sẻ kiến thức và đón nhận những cơ hội mới. Nếu bạn muốn kết nối, đừng ngần ngại liên hệ với tôi.",
       "p4": "Cảm ơn bạn đã ghé thăm..."
     }
   },
   "technologies": {
     "title": "Công nghệ cốt lõi",
+    "coming_soon": "Vẫn đang cập nhật thêm các công nghệ mới",
     "php_desc": "2 năm kinh nghiệm trong việc phát triển và bảo trì hệ thống doanh nghiệp.",
     "vue_desc": "Xây dựng các giao diện hiện đại, phản hồi với Composition API và kiến trúc dựa trên component.",
     "linux_desc": "Môi trường phát triển hàng ngày, quản trị hệ thống và triển khai máy chủ.",
@@ -39,6 +59,9 @@
   },
   "repos": {
     "title": "Repositories",
+    "note": "Vì lí do bảo mật khách hàng nên một số dự án công ty và doanh nghiệp tôi không thể public được.",
+    "note2": "Dưới đây là một số dự án GitHub cá nhân của tôi.",
+    "note_cv": "Xem thêm mô tả trong CV của tôi",
     "no_desc": "Chưa có mô tả.",
     "error": "Không thể tải repositories. Vui lòng thử lại.",
     "retry": "Thử lại",
@@ -69,6 +92,11 @@
     }
   },
   "footer": {
-    "copyright": "© 2026 - Được xây dựng với Vue và Tailwind CSS"
+    "cta": "Cùng trò chuyện",
+    "top": "Lên đầu",
+    "marquee_1": "Sẵn sàng nhận việc",
+    "marquee_2": "Cùng tạo nên điều gì đó",
+    "marquee_3": "Mở với các cơ hội",
+    "copyright": "Xây dựng với Vue & Tailwind CSS"
   }
 }

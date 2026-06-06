@@ -1,82 +1,97 @@
 <template>
   <section>
-    <div class="flex items-center justify-between mb-6">
-      <h2 class="font-bold text-2xl text-foreground">{{ $t('repos.title') }}</h2>
-      <a
-        v-if="!loading && !error"
-        href="https://github.com/nvhai272?tab=repositories"
-        target="_blank"
-        rel="noopener"
-        class="text-xs text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-colors"
-      >
-        {{ $t('repos.view_all') }} →
-      </a>
+    <SectionHeader index="03" :title="$t('sections.work.title')" :meta="$t('sections.work.meta')" />
+
+    <div v-reveal="120" class="mb-8 max-w-3xl text-sm sm:text-base leading-relaxed text-muted-foreground">
+      <p>{{ $t('repos.note') }}</p>
+      <p class="my-1">
+        <button
+          type="button"
+          @click="cvOpen = true"
+          class="inline-flex items-center gap-1.5 font-medium text-foreground underline underline-offset-4 decoration-accent hover:text-accent transition-colors"
+        >
+          {{ $t('repos.note_cv') }}
+          <ArrowUpRightIcon class="size-4 text-accent" />
+        </button>
+      </p>
+      <p>{{ $t('repos.note2') }}</p>
     </div>
 
     <!-- Loading skeleton -->
-    <div v-if="loading" class="divide-y divide-border">
-      <div v-for="i in 6" :key="i" class="py-4 flex flex-col gap-2 animate-pulse">
-        <div class="h-4 bg-muted rounded w-1/3" />
-        <div class="h-3 bg-muted rounded w-3/4" />
-        <div class="h-3 bg-muted rounded w-1/4" />
+    <div v-if="loading" class="border-t-2 border-border">
+      <div v-for="i in 6" :key="i" class="py-6 border-b border-border-soft flex flex-col gap-2 animate-pulse">
+        <div class="h-5 bg-muted w-1/3" />
+        <div class="h-3 bg-muted w-3/4" />
       </div>
     </div>
 
-    <!-- Error state -->
-    <div v-else-if="error" class="py-12 flex flex-col items-center gap-3 text-muted-foreground">
-      <p class="text-sm">{{ $t('repos.error') }}</p>
-      <button
-        @click="fetchRepos"
-        class="text-xs px-3 py-1.5 rounded border border-border hover:bg-secondary transition-colors"
-      >
+    <!-- Error -->
+    <div v-else-if="error" v-reveal class="border-2 border-border p-10 flex flex-col items-center gap-4">
+      <p class="font-mono text-sm text-muted-foreground">{{ $t('repos.error') }}</p>
+      <button @click="fetchRepos" class="btn-brut px-4 h-9 font-mono text-xs font-bold uppercase tracking-wider">
         {{ $t('repos.retry') }}
       </button>
     </div>
 
-    <!-- Repos list -->
-    <div v-else class="divide-y divide-border">
+    <!-- List -->
+    <div v-else v-reveal="200" class="border-t-2 border-border">
       <a
-        v-for="repo in repos"
+        v-for="(repo, index) in repos"
         :key="repo.id"
         :href="repo.html_url"
         target="_blank"
         rel="noopener"
-        class="group block py-4"
+        class="group grid grid-cols-[auto_1fr_auto] items-center gap-4 sm:gap-6 py-5 sm:py-6 px-1 sm:px-3 border-b border-border-soft hover:bg-foreground hover:text-background transition-colors duration-200"
       >
-        <div class="flex items-start justify-between gap-4">
-          <span class="font-semibold text-sm text-link group-hover:underline underline-offset-4">
+        <span class="font-mono text-xs text-muted-foreground group-hover:text-background/60 self-start pt-1">
+          {{ String(index + 1).padStart(2, '0') }}
+        </span>
+
+        <div class="min-w-0">
+          <h3 class="font-display font-bold uppercase tracking-tight text-xl sm:text-2xl leading-none truncate">
             {{ repo.name }}
             <span
               v-if="repo.private"
-              class="ml-1.5 text-[10px] border border-border text-muted-foreground px-1.5 py-0.5 rounded-full font-normal no-underline"
-            >
-              Private
+              class="ml-2 align-middle font-mono text-[10px] uppercase tracking-wider border border-current px-1.5 py-0.5"
+            >Private</span>
+          </h3>
+          <p class="mt-2 text-sm leading-snug text-muted-foreground group-hover:text-background/70 line-clamp-2 max-w-2xl">
+            {{ repo.description || $t('repos.no_desc') }}
+          </p>
+          <div class="mt-3 flex items-center gap-5 font-mono text-[11px] uppercase tracking-wider text-muted-foreground group-hover:text-background/70">
+            <span v-if="repo.language" class="flex items-center gap-1.5">
+              <span class="size-2.5 shrink-0" :style="{ backgroundColor: langColors[repo.language] || '#888' }" />
+              {{ repo.language }}
             </span>
-          </span>
+            <span class="flex items-center gap-1"><StarIcon class="size-3" />{{ repo.stargazers_count }}</span>
+            <span class="flex items-center gap-1"><ShareIcon class="size-3" />{{ repo.forks_count }}</span>
+          </div>
         </div>
-        <p class="text-xs text-muted-foreground mt-1 leading-5 line-clamp-2">
-          {{ repo.description || $t('repos.no_desc') }}
-        </p>
-        <div class="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
-          <span v-if="repo.language" class="flex items-center gap-1.5">
-            <span class="size-2.5 rounded-full shrink-0" :style="{ backgroundColor: langColors[repo.language] || '#888' }" />
-            {{ repo.language }}
-          </span>
-          <span class="flex items-center gap-1">
-            <StarIcon class="size-3" />{{ repo.stargazers_count }}
-          </span>
-          <span class="flex items-center gap-1">
-            <ShareIcon class="size-3" />{{ repo.forks_count }}
-          </span>
-        </div>
+
+        <ArrowUpRightIcon class="size-6 sm:size-7 shrink-0 self-start transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
       </a>
     </div>
+
+    <a
+      v-if="!loading && !error"
+      href="https://github.com/nvhai272?tab=repositories"
+      target="_blank"
+      rel="noopener"
+      class="mt-6 inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-foreground group"
+    >
+      <span class="border-b-2 border-accent">{{ $t('repos.view_all') }}</span>
+      <ArrowUpRightIcon class="size-4 text-accent transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+    </a>
+
+    <CvModal :open="cvOpen" @close="cvOpen = false" />
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { StarIcon, ShareIcon } from '@heroicons/vue/20/solid'
+import { StarIcon, ShareIcon, ArrowUpRightIcon } from '@heroicons/vue/20/solid'
+import SectionHeader from './SectionHeader.vue'
+import CvModal from './CvModal.vue'
 
 interface Repo {
   id: number
@@ -92,6 +107,7 @@ interface Repo {
 const repos = ref<Repo[]>([])
 const loading = ref(true)
 const error = ref(false)
+const cvOpen = ref(false)
 
 const langColors: Record<string, string> = {
   TypeScript: '#3178C6',

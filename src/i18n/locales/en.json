@@ -7,9 +7,27 @@
   },
   "nav": {
     "about": "About",
-    "skills": "Skills",
+    "stack": "Stack",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "hero": {
+    "kicker": "Web Developer · Portfolio",
+    "summary": "I build and maintain modern web applications — turning ideas into fast, reliable, and maintainable interfaces.",
+    "available": "Available for work",
+    "cta_contact": "Get in touch"
+  },
+  "sections": {
+    "about":   { "title": "About",   "meta": "Who I am" },
+    "stack":   { "title": "Stack",   "meta": "What I use" },
+    "work":    { "title": "Work",    "meta": "Selected repositories" },
+    "contact": { "title": "Contact", "meta": "Say hello" }
+  },
+  "about": {
+    "role_label": "Role",
+    "based_label": "Based in",
+    "focus_label": "Focus",
+    "focus_value": "Web applications"
   },
   "tabs": {
     "overview": "Overview",
@@ -20,17 +38,19 @@
     "view_history": "View History",
     "download_cv": "Download CV",
     "view_cv": "View CV",
-    "bio_decide": "1 brain, 2 hands, 3 seconds to decide",
+    "bio_decide": "1 brain, 2 hands, 3 seconds to decide.",
     "location": "Ha Noi, Viet Nam",
     "the_story": {
       "name": "Hello World!",
       "p2": "I am a web developer currently focused on building and maintaining web applications.",
+      "ai_note": "With the growth and support of AI, I am confident I can take on work across a wide range of technologies.",
       "p3": "I am always open to meaningful conversations, knowledge sharing, and new opportunities. If you'd like to connect, don't hesitate to reach out.",
       "p4": "Thank you for visiting..."
     }
   },
   "technologies": {
     "title": "Core Technologies",
+    "coming_soon": "Still adding new technologies",
     "php_desc": "2 years of experience in enterprise system development and maintenance.",
     "vue_desc": "Building modern, reactive UIs with Composition API and component-based architecture.",
     "linux_desc": "Daily development environment, system administration, and server deployment.",
@@ -39,6 +59,9 @@
   },
   "repos": {
     "title": "Repositories",
+    "note": "For client confidentiality reasons, some company and enterprise projects cannot be made public.",
+    "note2": "Below are some of my personal GitHub projects.",
+    "note_cv": "See more details in my CV",
     "no_desc": "No description provided.",
     "error": "Failed to load repositories. Please try again.",
     "retry": "Retry",
@@ -69,6 +92,11 @@
     }
   },
   "footer": {
-    "copyright": "© 2026 - Built with Vue and Tailwind CSS"
+    "cta": "Let's talk",
+    "top": "Top",
+    "marquee_1": "Available for work",
+    "marquee_2": "Let's build something",
+    "marquee_3": "Open to opportunities",
+    "copyright": "Built with Vue & Tailwind CSS"
   }
 }

@@ -1,11 +1,16 @@
 <template>
   <Transition name="loading-fade" @after-leave="$emit('done')">
     <div v-if="visible" class="loading-screen">
-      <div class="loading-content">
-        <img src="/Gibli Tribute.gif" alt="loading" class="loading-gif" />
-        <div class="typewriter-wrap">
-          <span class="typewriter-text">{{ displayed }}</span>
+      <div class="loading-inner">
+        <div class="loading-top">
+          <span class="loading-tag font-bold">PORTFOLIO - NVHAI272</span>
+          <span class="loading-pct">{{ Math.floor(progress) }}%</span>
         </div>
+
+        <h1 class="loading-word">
+          {{ displayed }}<span class="loading-caret">_</span>
+        </h1>
+
         <div class="loading-bar-wrap">
           <div class="loading-bar" :style="{ width: progress + '%' }"></div>
         </div>
@@ -20,11 +25,10 @@ import { ref, onMounted } from 'vue'
 defineEmits<{ done: [] }>()
 
 const TEXT = 'CODE FOR LIFE'
-const TYPE_SPEED = 90
-const FADE_DELAY = 3000
+const TYPE_SPEED = 80
+const FADE_DELAY = 2600
 
 const displayed = ref('')
-const dots = ref('')
 const visible = ref(true)
 const progress = ref(0)
 
@@ -34,16 +38,6 @@ onMounted(() => {
     if (i < TEXT.length) {
       displayed.value += TEXT[i++]
       setTimeout(type, TYPE_SPEED)
-    } else {
-      let d = 0
-      const addDot = () => {
-        if (d < 3) {
-          dots.value += '.'
-          d++
-          setTimeout(addDot, 200)
-        }
-      }
-      addDot()
     }
   }
   type()
@@ -55,9 +49,7 @@ onMounted(() => {
   }
   requestAnimationFrame(tick)
 
-  setTimeout(() => {
-    visible.value = false
-  }, FADE_DELAY)
+  setTimeout(() => { visible.value = false }, FADE_DELAY)
 })
 </script>
 
@@ -66,64 +58,73 @@ onMounted(() => {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #0F1219;
+  background: var(--background);
+  color: var(--foreground);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
 }
 
-.loading-content {
+.loading-inner {
+  width: min(680px, 100%);
+}
+
+.loading-top {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-soft);
 }
 
-.typewriter-wrap {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: clamp(1.75rem, 5vw, 3.5rem);
+.loading-word {
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  margin: 1.5rem 0;
+  color: var(--foreground);
 }
 
-.typewriter-text {
-  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #f472b6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.loading-gif {
-  width: clamp(160px, 30vw, 280px);
-  height: auto;
-  border-radius: 12px;
+.loading-caret {
+  color: var(--accent);
+  animation: blink 1.1s step-start infinite;
 }
 
 .loading-bar-wrap {
-  width: min(320px, 60vw);
-  height: 3px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 999px;
-  overflow: hidden;
+  width: 100%;
+  height: 4px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
 }
 
 .loading-bar {
   height: 100%;
-  background: linear-gradient(90deg, #38bdf8, #818cf8, #f472b6);
-  border-radius: 999px;
+  background: var(--accent);
   transition: width 0.05s linear;
 }
 
-/* Fade out transition */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
 .loading-fade-leave-active {
-  transition: opacity 0.6s ease;
+  transition: opacity 0.5s ease;
 }
 .loading-fade-leave-to {
   opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-caret { animation: none; }
 }
 </style>
