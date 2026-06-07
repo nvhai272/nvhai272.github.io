@@ -117,11 +117,24 @@
       <iframe
         :src="mapSrc"
         class="w-full h-[300px] sm:h-[380px] dark:invert-[0.9] dark:hue-rotate-180"
+        :class="mapActive ? '' : 'pointer-events-none'"
         style="border:0;"
         allowfullscreen="true"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
+      <!-- Tap-to-activate overlay: lets the page scroll past the map on touch devices -->
+      <button
+        v-if="!mapActive"
+        type="button"
+        @click="mapActive = true"
+        class="absolute inset-0 z-[5] flex items-end justify-center pb-4 bg-transparent"
+        :aria-label="$t('contact.map_hint')"
+      >
+        <span class="bg-background border-2 border-border px-3 py-1.5 font-mono text-[11px] font-bold uppercase tracking-widest">
+          {{ $t('contact.map_hint') }}
+        </span>
+      </button>
     </div>
   </section>
 </template>
@@ -139,6 +152,7 @@ const inputCls = 'px-3.5 py-3 border-2 bg-card text-foreground text-sm placehold
 
 const HOME = { lat: 20.999810, lng: 105.872540 }
 const mapSrc = `https://maps.google.com/maps?q=${HOME.lat},${HOME.lng}&z=15&output=embed`
+const mapActive = ref(false)
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xpqoprpe'
 

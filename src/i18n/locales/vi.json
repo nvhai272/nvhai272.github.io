@@ -70,6 +70,7 @@
   "contact": {
     "title": "Liên hệ",
     "intro": "Bạn có dự án muốn thảo luận hoặc cơ hội hợp tác? Hãy gửi tin nhắn cho tôi, tôi sẽ phản hồi sớm nhất có thể.",
+    "map_hint": "Chạm để tương tác bản đồ",
     "form": {
       "name": "Họ tên",
       "name_placeholder": "Nguyễn Văn A",
@@ -97,6 +98,6 @@
     "marquee_1": "Sẵn sàng nhận việc",
     "marquee_2": "Cùng tạo nên điều gì đó",
     "marquee_3": "Mở với các cơ hội",
-    "copyright": "@ Code For Life - Portfolio"
+    "copyright": "© Code For Life - Portfolio"
   }
 }

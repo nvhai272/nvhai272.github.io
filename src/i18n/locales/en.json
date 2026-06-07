@@ -70,6 +70,7 @@
   "contact": {
     "title": "Contact",
     "intro": "Have a project to discuss or a collaboration opportunity? Send me a message and I'll get back to you as soon as possible.",
+    "map_hint": "Tap to interact with the map",
     "form": {
       "name": "Name",
       "name_placeholder": "John Doe",
@@ -97,6 +98,6 @@
     "marquee_1": "Available for work",
     "marquee_2": "Let's build something",
     "marquee_3": "Open to opportunities",
-    "copyright": "@ Code For Life - Portfolio"
+    "copyright": "© Code For Life - Portfolio"
   }
 }
