@@ -20,7 +20,7 @@
   "sections": {
     "about":   { "title": "About",   "meta": "Who I am" },
     "stack":   { "title": "Stack",   "meta": "What I use" },
-    "work":    { "title": "Work",    "meta": "Selected repositories" },
+    "work":    { "title": "Project",    "meta": "Selected repositories" },
     "contact": { "title": "Contact", "meta": "Say hello" }
   },
   "about": {
@@ -60,7 +60,7 @@
   "repos": {
     "title": "Repositories",
     "note": "For client confidentiality reasons, some company and enterprise projects cannot be made public.",
-    "note2": "Below are some of my personal GitHub projects.",
+    "note2": "Some of my personal GitHub projects.",
     "note_cv": "See more details in my CV",
     "no_desc": "No description provided.",
     "error": "Failed to load repositories. Please try again.",
@@ -97,6 +97,6 @@
     "marquee_1": "Available for work",
     "marquee_2": "Let's build something",
     "marquee_3": "Open to opportunities",
-    "copyright": "Built with Vue & Tailwind CSS"
+    "copyright": "@ Code For Life - Portfolio"
   }
 }

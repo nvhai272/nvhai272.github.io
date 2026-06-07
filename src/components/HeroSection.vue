@@ -14,17 +14,14 @@
         </div>
 
         <div v-reveal="180" class="flex flex-wrap items-center gap-x-4 gap-y-2 pb-5 rule-hair">
-          <span class="font-display font-semibold text-lg sm:text-xl uppercase tracking-tight">
+          <span class="font-display font-bold text-lg sm:text-xl tracking-tight">
             {{ $t('sidebar.job_title') }}
           </span>
-          <span class="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-            <span class="size-2 bg-green-500 inline-block animate-pulse" />
-            {{ $t('hero.available') }}
-          </span>
+          
         </div>
 
         <!-- CTAs -->
-        <div class="mt-7 flex flex-wrap items-center gap-3">
+        <div class="mt-5 flex flex-wrap items-center gap-3">
           <a v-reveal="240" href="#contact" class="btn-accent px-5 h-11 flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider">
             {{ $t('hero.cta_contact') }}
             <ArrowDownRightIcon class="size-4" />
@@ -50,7 +47,7 @@
         </div>
 
         <!-- Contact lines -->
-        <div class="mt-7 flex flex-col gap-2 font-mono text-sm sm:text-base">
+        <div class="mt-5 flex flex-col gap-2 font-mono text-sm sm:text-base">
           <a v-reveal="420" href="mailto:nvhai272@gmail.com" class="group inline-flex items-center gap-2 text-foreground w-fit">
             <AtSignIcon class="size-3.5 text-accent" />
             <span class="border-b border-foreground/30 group-hover:border-foreground">nvhai272@gmail.com</span>
@@ -87,7 +84,7 @@
     </div>
 
     <!-- About description: full-width -->
-    <div class="mt-10 sm:mt-12 space-y-4 text-base sm:text-lg leading-relaxed text-muted-foreground">
+    <div class="mt-5 sm:mt-12 text-base sm:text-lg leading-relaxed text-muted-foreground">
       <p v-reveal>{{ $t('sidebar.the_story.p2') }}</p>
       <p v-reveal="90">{{ $t('sidebar.the_story.ai_note') }}</p>
       <p v-reveal="180">{{ $t('sidebar.the_story.p3') }}</p>

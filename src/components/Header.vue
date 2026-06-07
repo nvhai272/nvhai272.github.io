@@ -57,7 +57,7 @@
 
     <!-- Mobile nav panel -->
     <Transition name="slide">
-      <nav v-if="menuOpen" class="md:hidden border-t-2 border-border bg-background">
+      <nav v-if="menuOpen" class="md:hidden absolute left-0 right-0 top-full border-t-2 border-border bg-background shadow-lg">
         <a
           v-for="(item, i) in navItems"
           :key="item.href"
@@ -85,14 +85,19 @@ const { locale, t } = useI18n()
 const menuOpen = ref(false)
 const currentLocale = computed(() => locale.value)
 
-// Close the mobile menu first, then scroll — avoids the anchor jump racing
-// the panel collapse on iOS, which left the heading at the wrong position.
+// Close the menu, then scroll to the target with an explicit header offset.
+// scrollIntoView + scroll-margin was unreliable on iOS, so compute the
+// position from the sticky bar height instead.
 const goTo = async (e: MouseEvent, href: string) => {
   e.preventDefault()
   menuOpen.value = false
   await nextTick()
   const el = document.querySelector(href)
-  el?.scrollIntoView({ behavior: 'smooth' })
+  if (!el) return
+  const bar = document.querySelector('header > div')
+  const offset = (bar?.clientHeight ?? 56) + 8
+  const top = el.getBoundingClientRect().top + window.scrollY - offset
+  window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' })
 }
 
 const navItems = computed(() => [

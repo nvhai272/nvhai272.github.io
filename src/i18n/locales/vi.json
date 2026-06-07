@@ -18,10 +18,10 @@
     "cta_contact": "Liên hệ ngay"
   },
   "sections": {
-    "about":   { "title": "Giới thiệu", "meta": "Tôi là ai" },
-    "stack":   { "title": "Công nghệ",  "meta": "Công cụ tôi dùng" },
-    "work":    { "title": "Dự án",      "meta": "Repository tiêu biểu" },
-    "contact": { "title": "Liên hệ",    "meta": "Chào nhé" }
+    "about":   { "title": "About", "meta": "Tôi là ai" },
+    "stack":   { "title": "Stack",  "meta": "Công cụ tôi dùng" },
+    "work":    { "title": "Project",      "meta": "Repository tiêu biểu" },
+    "contact": { "title": "Contact",    "meta": "Chào nhé" }
   },
   "about": {
     "role_label": "Vai trò",
@@ -60,7 +60,7 @@
   "repos": {
     "title": "Repositories",
     "note": "Vì lí do bảo mật khách hàng nên một số dự án công ty và doanh nghiệp tôi không thể public được.",
-    "note2": "Dưới đây là một số dự án GitHub cá nhân của tôi.",
+    "note2": "Một số dự án GitHub cá nhân của tôi.",
     "note_cv": "Xem thêm mô tả trong CV của tôi",
     "no_desc": "Chưa có mô tả.",
     "error": "Không thể tải repositories. Vui lòng thử lại.",
@@ -97,6 +97,6 @@
     "marquee_1": "Sẵn sàng nhận việc",
     "marquee_2": "Cùng tạo nên điều gì đó",
     "marquee_3": "Mở với các cơ hội",
-    "copyright": "Xây dựng với Vue & Tailwind CSS"
+    "copyright": "@ Code For Life - Portfolio"
   }
 }

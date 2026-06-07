@@ -5,14 +5,14 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
       <!-- Info -->
       <div v-reveal="120" class="lg:col-span-5 flex flex-col">
-        <p class="text-base sm:text-lg leading-relaxed text-muted-foreground">{{ $t('contact.intro') }}</p>
+        <p class="mt-2 text-base sm:text-lg leading-relaxed text-muted-foreground">{{ $t('contact.intro') }}</p>
 
-        <div class="mt-6 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+        <div class="mt-5 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
           <span class="size-2 bg-green-500 inline-block animate-pulse" />
           {{ $t('hero.available') }}
         </div>
 
-        <div class="mt-8 border-t-2 border-border">
+        <div class="mt-5 border-t-2 border-border">
           <a
             href="mailto:nvhai272@gmail.com"
             class="group flex items-center justify-between gap-4 py-4 border-b border-border-soft hover:text-accent transition-colors"

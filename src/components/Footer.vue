@@ -2,7 +2,7 @@
   <footer class="">
     
     <!-- Big CTA -->
-    <div class="max-w-[1200px] mx-auto px-4 sm:px-8 py-14 sm:py-20">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-8 py-8 sm:py-20">
       <a
         href="mailto:nvhai272@gmail.com"
         class="group inline-flex items-end gap-3 font-display font-bold uppercase tracking-tighter leading-[0.9] text-foreground text-[clamp(2.25rem,9vw,7rem)]"
@@ -12,7 +12,7 @@
       </a>
 
       <!-- Bottom row -->
-      <div class="mt-12 pt-6 border-t border-border-soft flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+      <div class="mt-8 pt-6 border-t border-border-soft flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
         <p class="font-mono font-bold text-[15px] tracking-widest text-muted-foreground">{{ $t('footer.copyright') }}</p>
 
         <div class="flex items-center gap-3">

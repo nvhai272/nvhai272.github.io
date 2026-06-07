@@ -2,8 +2,8 @@
   <section>
     <SectionHeader index="03" :title="$t('sections.work.title')" :meta="$t('sections.work.meta')" />
 
-    <div v-reveal="120" class="mb-8 max-w-5xl text-base sm:text-lg leading-relaxed text-muted-foreground">
-      <p>{{ $t('repos.note') }}</p>
+    <div v-reveal="120" class="mb-2 max-w-5xl text-base sm:text-lg leading-relaxed text-muted-foreground">
+      <p class="mt-2">{{ $t('repos.note') }}</p>
       <p class="my-1">
         <button
           type="button"
