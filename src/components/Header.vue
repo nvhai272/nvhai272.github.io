@@ -2,7 +2,7 @@
   <header class="sticky top-0 z-40 bg-background/90 backdrop-blur-md border-b-2 border-border">
     <div class="max-w-[1200px] mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center gap-4">
       <!-- Wordmark -->
-      <a href="#top" class="flex items-baseline gap-2 shrink-0 group">
+      <a href="#top" @click="goTo($event, '#top')" class="flex items-baseline gap-2 shrink-0 group">
         <span class="font-display font-bold text-base sm:text-lg uppercase tracking-tight text-foreground">
           Portfolio<span class="text-accent">.</span>
         </span>
@@ -14,6 +14,7 @@
           v-for="(item, i) in navItems"
           :key="item.href"
           :href="item.href"
+          @click="goTo($event, item.href)"
           class="group flex items-baseline gap-1.5 font-mono text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
         >
           <span class="text-accent">{{ String(i + 1).padStart(2, '0') }}</span>
@@ -61,7 +62,7 @@
           v-for="(item, i) in navItems"
           :key="item.href"
           :href="item.href"
-          @click="menuOpen = false"
+          @click="goTo($event, item.href)"
           class="flex items-baseline gap-3 px-5 py-4 border-b border-border-soft font-display font-bold uppercase tracking-tight text-2xl text-foreground hover:text-accent transition-colors"
         >
           <span class="font-mono text-xs text-accent">{{ String(i + 1).padStart(2, '0') }}</span>
@@ -73,7 +74,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, nextTick } from 'vue'
 import { GlobeAltIcon, SunIcon, MoonIcon, Bars2Icon, XMarkIcon } from '@heroicons/vue/20/solid'
 import { useI18n } from 'vue-i18n'
 
@@ -83,6 +84,16 @@ defineEmits<{ toggle: [] }>()
 const { locale, t } = useI18n()
 const menuOpen = ref(false)
 const currentLocale = computed(() => locale.value)
+
+// Close the mobile menu first, then scroll — avoids the anchor jump racing
+// the panel collapse on iOS, which left the heading at the wrong position.
+const goTo = async (e: MouseEvent, href: string) => {
+  e.preventDefault()
+  menuOpen.value = false
+  await nextTick()
+  const el = document.querySelector(href)
+  el?.scrollIntoView({ behavior: 'smooth' })
+}
 
 const navItems = computed(() => [
   { href: '#about',        label: t('nav.about') },
