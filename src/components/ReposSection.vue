@@ -2,7 +2,7 @@
   <section>
     <SectionHeader index="03" :title="$t('sections.work.title')" :meta="$t('sections.work.meta')" />
 
-    <div v-reveal="120" class="mb-8 max-w-3xl text-sm sm:text-base leading-relaxed text-muted-foreground">
+    <div v-reveal="120" class="mb-8 max-w-3xl text-base sm:text-lg leading-relaxed text-muted-foreground">
       <p>{{ $t('repos.note') }}</p>
       <p class="my-1">
         <button
@@ -48,7 +48,7 @@
         </span>
 
         <div class="min-w-0">
-          <h3 class="font-display font-bold uppercase tracking-tight text-xl sm:text-2xl leading-none truncate">
+          <h3 class="font-display font-bold tracking-tight text-xl sm:text-2xl leading-none truncate">
             {{ repo.name }}
             <span
               v-if="repo.private"

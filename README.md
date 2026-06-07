@@ -19,11 +19,13 @@ https://nvhai272.github.io
 ## Tính năng
 
 - Dark mode (class-based, lưu vào `localStorage`)
-- Đa ngôn ngữ Tiếng Việt / English (lưu vào `localStorage`)
-- Responsive — mobile bottom nav + desktop sidebar
+- Đa ngôn ngữ Tiếng Việt / English (lưu vào `localStorage`, mặc định `en`)
+- Single-page scroll layout với các section neo: About · Stack · Work · Contact
+- Header nav cuộn mượt tới từng section (anchor link), responsive
+- Scroll reveal animation qua directive `v-reveal` (IntersectionObserver)
 - Loading screen animation khi khởi động
-- Tab navigation: Overview · Experience · Contact
-- Không dùng Vue Router — tab state quản lý thuần bằng `ref` trong `App.vue`
+- WeatherModal nổi, độc lập
+- Không dùng Vue Router — không dùng tab; state `dark` / `appReady` quản lý thuần bằng `ref` trong `App.vue`
 
 ## Cài đặt & chạy
 
@@ -39,20 +41,20 @@ npm run preview   # preview production build
 ```
 src/
 ├── components/
-│   ├── LoadingScreen.vue
-│   ├── Header.vue
-│   ├── Sidebar.vue
-│   ├── MobileNav.vue
-│   ├── TabNav.vue
-│   ├── BioSection.vue
-│   ├── CoreTechnologies.vue
-│   ├── ExperienceSection.vue
-│   ├── ProjectsSection.vue
-│   ├── ReposSection.vue
-│   ├── ContactSection.vue
-│   └── Footer.vue
+│   ├── LoadingScreen.vue      # splash khi khởi động
+│   ├── Header.vue            # top bar: nav anchor + locale + dark toggle
+│   ├── HeroSection.vue       # hero + about (#about)
+│   ├── CoreTechnologies.vue  # tech stack (#stack)
+│   ├── ReposSection.vue      # projects / GitHub repos (#work)
+│   ├── ContactSection.vue    # liên hệ (#contact)
+│   ├── Footer.vue
+│   ├── WeatherModal.vue      # modal thời tiết nổi
+│   ├── SectionHeader.vue     # heading dùng chung cho các section
+│   └── CvModal.vue           # modal xem CV
 ├── composables/
 │   └── useLocale.ts
+├── directives/
+│   └── reveal.ts             # v-reveal: scroll reveal animation
 ├── i18n/
 │   ├── index.ts
 │   └── locales/
@@ -60,6 +62,7 @@ src/
 │       └── en.json
 ├── styles/
 │   ├── fonts.css
+│   ├── tailwind.css
 │   └── theme.css
 ├── App.vue
 ├── main.ts

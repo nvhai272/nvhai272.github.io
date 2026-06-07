@@ -51,10 +51,10 @@ const changeLanguage = (lang: string) => {
 ```
 
 ## Ngôn ngữ được hỗ trợ
-- `vi`: Tiếng Việt (mặc định)
-- `en`: Tiếng Anh
+- `en`: Tiếng Anh (mặc định)
+- `vi`: Tiếng Việt
 
 ## Lưu ý
 - Ngôn ngữ được lưu trong localStorage với key `locale`
 - Khi reload trang, ngôn ngữ sẽ được khôi phục từ localStorage
-- Nếu không có ngôn ngữ được lưu, mặc định sẽ là tiếng Việt
+- Nếu không có ngôn ngữ được lưu, mặc định sẽ là tiếng Anh (`en`), fallback cũng là `en`

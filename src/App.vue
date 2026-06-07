@@ -10,14 +10,10 @@
       </section>
 
       <!-- Sections -->
-      <div class="max-w-[1200px] mx-auto px-4 sm:px-8">
-        <hr class="my-10 sm:my-14 border-t-2 border-border" />
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8 space-y-8">
         <section id="stack" class="scroll-mt-16 sm:scroll-mt-20"><CoreTechnologies /></section>
-        <hr class="my-10 sm:my-14 border-t-2 border-border" />
         <section id="work" class="scroll-mt-16 sm:scroll-mt-20"><ReposSection /></section>
-        <hr class="my-10 sm:my-14 border-t-2 border-border" />
         <section id="contact" class="scroll-mt-16 sm:scroll-mt-20"><ContactSection /></section>
-        <hr class="my-10 sm:my-14 border-t-2 border-border" />
       </div>
     </main>
 
